@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Project | Misbahul Anam Sidiq</title>
+    
+    <!-- Font Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        crimson: {
+                            50: '#fff1f2',
+                            100: '#ffe4e6',
+                            200: '#fecdd3',
+                            300: '#fda4af',
+                            400: '#fb7185',
+                            500: '#f43f5e',
+                            600: '#e11d48',
+                            700: '#be123c',
+                            800: '#9f1239',
+                            900: '#881337',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(225, 29, 72, 0.12);
+        }
+        .glow-bright {
+            box-shadow: 0 20px 40px -15px rgba(225, 29, 72, 0.12);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased min-h-screen py-16 px-6 relative overflow-x-hidden flex flex-col justify-between items-center">
+
+    <!-- Ambient Background Glow -->
+    <div class="fixed -top-40 -left-40 w-[600px] h-[600px] bg-rose-200/50 rounded-full blur-[140px] pointer-events-none z-0"></div>
+    <div class="fixed -bottom-40 -right-40 w-[550px] h-[550px] bg-amber-100/50 rounded-full blur-[150px] pointer-events-none z-0"></div>
+
+    <!-- KONTEN UTAMA PROJECT -->
+    <main class="max-w-6xl w-full mx-auto relative z-10 space-y-10">
+        
+        <!-- Header Section -->
+        <div class="text-center space-y-3">
+            <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-rose-100/80 border border-rose-200 text-crimson-700 text-xs font-semibold tracking-wide uppercase shadow-sm">
+                <i class="fa-solid fa-folder-open text-crimson-600"></i> Portofolio
+            </span>
+            <h1 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
+                Project Yang Pernah <span class="bg-gradient-to-r from-crimson-600 to-rose-500 bg-clip-text text-transparent">Dikerjakan</span>
+            </h1>
+            <p class="text-slate-500 text-sm max-w-md mx-auto">
+                Kumpulan hasil karya pengembangan web & aplikasi interaktif.
+            </p>
+        </div>
+
+        <!-- Grid Cards Project -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <!-- PROJECT 1: E-Commerce UMKM Laundry -->
+            <div class="glass-card rounded-3xl p-6 glow-bright border border-rose-100 flex flex-col justify-between space-y-4 hover:-translate-y-1 transition duration-300">
+                <div class="space-y-4">
+                    <!-- Banner Mockup Gambar -->
+                    <div class="w-full h-44 bg-rose-50/60 rounded-2xl overflow-hidden border border-rose-100 relative group flex items-center justify-center">
+                        <div class="text-center p-4">
+                            <i class="fa-solid fa-shirt text-crimson-500 text-3xl mb-2"></i>
+                            <span class="block text-xs font-bold text-slate-700">Web App Laundry</span>
+                        </div>
+                        <span class="absolute top-3 right-3 bg-crimson-600 text-white text-[10px] font-bold px-2.5 py-1 rounded-full shadow-sm">
+                            Web App
+                        </span>
+                    </div>
+
+                    <h2 class="text-lg font-bold text-slate-900 leading-snug">
+                        Website E-Commerce UMKM Laundry
+                    </h2>
+                    
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Sistem pemesanan layanan laundry online terintegrasi dengan kalkulator berat, manajemen transaksi, dan database MySQL.
+                    </p>
+                </div>
+
+                <!-- Skill Tags Red Badge -->
+                <div class="pt-2">
+                    <div class="bg-rose-50 border border-rose-100/80 rounded-xl px-3 py-2 flex items-center gap-2 text-[11px] font-bold text-crimson-600">
+                        <i class="fa-solid fa-code text-[10px]"></i>
+                        <span>HTML, CSS, JS</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROJECT 2: Aplikasi Mobile KIP Kuliah Tracker -->
+            <div class="glass-card rounded-3xl p-6 glow-bright border border-rose-100 flex flex-col justify-between space-y-4 hover:-translate-y-1 transition duration-300">
+                <div class="space-y-4">
+                    <!-- Banner Mockup Gambar -->
+                    <div class="w-full h-44 bg-blue-50/60 rounded-2xl overflow-hidden border border-slate-200/60 relative group flex items-center justify-center">
+                        <div class="text-center p-4">
+                            <i class="fa-solid fa-graduation-cap text-blue-600 text-3xl mb-2"></i>
+                            <span class="block text-xs font-bold text-slate-700">Akun Mobile KIP-K</span>
+                        </div>
+                        <span class="absolute top-3 right-3 bg-rose-100 text-crimson-700 border border-rose-200 text-[10px] font-bold px-2.5 py-1 rounded-full shadow-sm">
+                            Aplikasi MOBILE
+                        </span>
+                    </div>
+
+                    <h2 class="text-lg font-bold text-slate-900 leading-snug">
+                        Aplikasi Mobile KIP Kuliah Tracker
+                    </h2>
+                    
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Platform berbasis web untuk membantu memantau dan memverifikasi alur pencairan serta status pengajuan KIP Kuliah secara efisien.
+                    </p>
+                </div>
+
+                <!-- Skill Tags Red Badge -->
+                <div class="pt-2">
+                    <div class="bg-rose-50 border border-rose-100/80 rounded-xl px-3 py-2 flex items-center gap-2 text-[11px] font-bold text-crimson-600">
+                        <i class="fa-solid fa-code text-[10px]"></i>
+                        <span>HTML, CSS, JS, Node.js, React.js</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROJECT 3: Landing Page KAI Commuter -->
+            <div class="glass-card rounded-3xl p-6 glow-bright border border-rose-100 flex flex-col justify-between space-y-4 hover:-translate-y-1 transition duration-300">
+                <div class="space-y-4">
+                    <!-- Banner Mockup Gambar -->
+                    <div class="w-full h-44 bg-slate-100/80 rounded-2xl overflow-hidden border border-slate-200 relative group flex items-center justify-center">
+                        <div class="text-center p-4">
+                            <i class="fa-solid fa-train text-slate-700 text-3xl mb-2"></i>
+                            <span class="block text-xs font-bold text-slate-700">Saldo KMT / E-Money</span>
+                        </div>
+                        <span class="absolute top-3 right-3 bg-crimson-600 text-white text-[10px] font-bold px-2.5 py-1 rounded-full shadow-sm">
+                            Web UI
+                        </span>
+                    </div>
+
+                    <h2 class="text-lg font-bold text-slate-900 leading-snug">
+                        Landing Page KAI Commuter
+                    </h2>
+                    
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Redesain antarmuka informasi layanan KRL Commuter Line Jabodetabek yang modern, cepat, dan responsif di berbagai perangkat.
+                    </p>
+                </div>
+
+                <!-- Skill Tags Red Badge -->
+                <div class="pt-2">
+                    <div class="bg-rose-50 border border-rose-100/80 rounded-xl px-3 py-2 flex items-center gap-2 text-[11px] font-bold text-crimson-600">
+                        <i class="fa-solid fa-code text-[10px]"></i>
+                        <span>HTML, Tailwind CSS, JS</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROJECT 4: Landing page Elearning STT NF -->
+            <div class="glass-card rounded-3xl p-6 glow-bright border border-rose-100 flex flex-col justify-between space-y-4 hover:-translate-y-1 transition duration-300">
+                <div class="space-y-4">
+                    <!-- Banner Mockup Gambar -->
+                    <div class="w-full h-44 bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 relative group flex items-center justify-center">
+                        <div class="text-center p-4 text-white">
+                            <i class="fa-solid fa-book-open-reader text-amber-400 text-3xl mb-2"></i>
+                            <span class="block text-xs font-bold text-slate-200">Dashboard Akademik</span>
+                        </div>
+                        <span class="absolute top-3 right-3 bg-rose-100 text-crimson-700 border border-rose-200 text-[10px] font-bold px-2.5 py-1 rounded-full shadow-sm">
+                            Website STT NF
+                        </span>
+                    </div>
+
+                    <h2 class="text-lg font-bold text-slate-900 leading-snug">
+                        Landing page Elearning STT NF
+                    </h2>
+                    
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Informasi tentang Pembelajaran MataKuliah yang dengan tampilan lebih fresh, modern, cepat, dan responsif.
+                    </p>
+                </div>
+
+                <!-- Skill Tags Red Badge -->
+                <div class="pt-2">
+                    <div class="bg-rose-50 border border-rose-100/80 rounded-xl px-3 py-2 flex items-center gap-2 text-[11px] font-bold text-crimson-600">
+                        <i class="fa-solid fa-code text-[10px]"></i>
+                        <span>HTML, Tailwind CSS, JS</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+</html>

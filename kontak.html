@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak | Misbahul Anam Sidiq</title>
+    
+    <!-- Font Inter & Playfair -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        crimson: {
+                            50: '#fff1f2',
+                            100: '#ffe4e6',
+                            200: '#fecdd3',
+                            300: '#fda4af',
+                            400: '#fb7185',
+                            500: '#f43f5e',
+                            600: '#e11d48',
+                            700: '#be123c',
+                            800: '#9f1239',
+                            900: '#881337',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(225, 29, 72, 0.12);
+        }
+        .glow-bright {
+            box-shadow: 0 20px 40px -15px rgba(225, 29, 72, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-crimson-500 selection:text-white min-h-screen relative overflow-x-hidden flex flex-col justify-between">
+
+    <!-- Efek Cahaya / Ambient Gradient Cerah -->
+    <div class="fixed -top-40 -left-40 w-[600px] h-[600px] bg-rose-200/50 rounded-full blur-[140px] pointer-events-none z-0"></div>
+    <div class="fixed top-1/3 -right-40 w-[500px] h-[500px] bg-crimson-100/60 rounded-full blur-[140px] pointer-events-none z-0"></div>
+    <div class="fixed -bottom-40 left-1/3 w-[550px] h-[550px] bg-amber-100/50 rounded-full blur-[150px] pointer-events-none z-0"></div>
+
+    <!-- Navigasi -->
+    <nav class="fixed top-0 left-0 w-full z-50 glass-card border-b border-rose-100/80 shadow-sm">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="index.html" class="font-serif text-2xl font-bold tracking-tight text-slate-900">
+                Misbah<span class="text-crimson-600">-</span>developer
+            </a>
+            <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
+                <a href="index.html#tentang" class="hover:text-crimson-600 transition">Tentang</a>
+                <a href="index.html#keahlian" class="hover:text-crimson-600 transition">Keahlian</a>
+                <a href="index.html#proyek" class="hover:text-crimson-600 transition">Proyek</a>
+                <a href="#kontak" class="text-crimson-600 font-bold transition">Kontak</a>
+            </div>
+            <a href="https://wa.me/6285697587484" target="_blank" class="text-xs font-semibold bg-crimson-600 hover:bg-crimson-700 text-white px-5 py-2.5 rounded-full transition shadow-lg shadow-crimson-600/20 flex items-center gap-2">
+                <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp
+            </a>
+        </div>
+    </nav>
+
+    <!-- SECTION KONTAK LENGKAP -->
+    <main class="pt-36 pb-20 px-6 relative z-10 flex-grow">
+        <div class="max-w-5xl mx-auto space-y-12">
+            
+            <!-- Header Halaman -->
+            <div class="text-center space-y-4 max-w-2xl mx-auto">
+                <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-rose-100/80 border border-rose-200 text-crimson-700 text-xs font-semibold tracking-wide uppercase shadow-sm">
+                    <span class="w-2 h-2 rounded-full bg-crimson-600 animate-ping"></span> Get In Touch
+                </span>
+                <h1 class="text-4xl sm:text-5xl font-black text-slate-900 tracking-tight leading-tight">
+                    Mari Terhubung & <span class="bg-gradient-to-r from-crimson-600 to-rose-500 bg-clip-text text-transparent">Berkolaborasi</span>
+                </h1>
+                <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                    Tertarik membuat website, konsultasi jaringan, atau ada penawaran proyek? Silakan kirim pesan melalui formulir atau saluran kontak di bawah ini.
+                </p>
+            </div>
+
+            <!-- Content Grid -->
+            <div class="grid lg:grid-cols-12 gap-8 items-start">
+                
+                <!-- Info Kontak Left Column -->
+                <div class="lg:col-span-5 space-y-6">
+                    
+                    <div class="glass-card rounded-3xl p-8 glow-bright border border-rose-100 space-y-6">
+                        <h2 class="text-xl font-bold text-slate-900 border-b border-slate-200/80 pb-4 flex items-center gap-3">
+                            <i class="fa-solid fa-address-book text-crimson-600"></i> Informasi Kontak
+                        </h2>
+
+                        <!-- WhatsApp -->
+                        <a href="https://wa.me/6285697587484" target="_blank" class="flex items-start gap-4 p-4 rounded-2xl bg-white hover:bg-rose-50/50 border border-slate-200/80 hover:border-crimson-300 transition duration-300 group shadow-sm">
+                            <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-2xl flex-shrink-0 group-hover:scale-110 transition">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs text-slate-500 font-semibold mb-0.5">WhatsApp / Telepon</span>
+                                <span class="text-sm font-bold text-slate-900 group-hover:text-emerald-600 transition">+62 856-9758-7484</span>
+                                <p class="text-[11px] text-slate-500 mt-1">Respon cepat untuk diskusi proyek</p>
+                            </div>
+                        </a>
+
+                        <!-- Email -->
+                        <a href="mailto:misbahulanamsidiq5@gmail.com" class="flex items-start gap-4 p-4 rounded-2xl bg-white hover:bg-rose-50/50 border border-slate-200/80 hover:border-crimson-300 transition duration-300 group shadow-sm">
+                            <div class="w-12 h-12 rounded-xl bg-rose-100 text-crimson-600 flex items-center justify-center text-2xl flex-shrink-0 group-hover:scale-110 transition">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs text-slate-500 font-semibold mb-0.5">Email Resmi</span>
+                                <span class="text-sm font-bold text-slate-900 group-hover:text-crimson-600 transition break-all">misbahulanamsidiq5@gmail.com</span>
+                                <p class="text-[11px] text-slate-500 mt-1">Untuk dokumen atau penawaran formal</p>
+                            </div>
+                        </a>
+
+                        <!-- Lokasi & Kampus -->
+                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-white border border-slate-200/80 shadow-sm">
+                            <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-2xl flex-shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs text-slate-500 font-semibold mb-0.5">Domisili / Kampus</span>
+                                <span class="text-sm font-bold text-slate-900">STT Terpadu Nurul Fikri</span>
+                                <p class="text-[11px] text-slate-500 mt-1">Depok, Jawa Barat, Indonesia</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Social Media Links -->
+                    <div class="glass-card rounded-3xl p-6 border border-rose-100 space-y-4 text-center">
+                        <span class="text-xs font-bold uppercase tracking-widest text-slate-500">Ikuti Media Sosial</span>
+                        <div class="flex justify-center gap-4 pt-2">
+                            <a href="https://github.com/misbahulanam2206" target="_blank" class="w-12 h-12 rounded-2xl bg-slate-900 text-white flex items-center justify-center text-xl hover:bg-crimson-600 hover:-translate-y-1 transition duration-300 shadow-md">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/feed/" target="_blank" class="w-12 h-12 rounded-2xl bg-sky-700 text-white flex items-center justify-center text-xl hover:bg-crimson-600 hover:-translate-y-1 transition duration-300 shadow-md">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://www.instagram.com/misbah.anam22/" target="_blank" class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-amber-500 via-rose-600 to-purple-600 text-white flex items-center justify-center text-xl hover:opacity-90 hover:-translate-y-1 transition duration-300 shadow-md">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Form Kontak Right Column -->
+                <div class="lg:col-span-7">
+                    <div class="glass-card rounded-3xl p-8 sm:p-10 glow-bright border border-rose-100 relative">
+                        <h2 class="text-2xl font-bold text-slate-900 mb-2">Kirim Pesan Langsung</h2>
+                        <p class="text-xs text-slate-500 mb-8">Isi formulir di bawah ini untuk mengirimkan email langsung kepada Misbahul Anam Sidiq.</p>
+
+                        <form action="mailto:misbahulanamsidiq5@gmail.com" method="post" enctype="text/plain" class="space-y-5">
+                            <div class="grid sm:grid-cols-2 gap-5">
+                                <div class="space-y-2">
+                                    <label for="nama" class="block text-xs font-bold text-slate-700 uppercase tracking-wider">Nama Lengkap</label>
+                                    <input type="text" id="nama" name="Nama" required placeholder="Contoh: Budi Santoso" class="w-full px-4 py-3 rounded-xl bg-white border border-slate-200 text-slate-900 text-sm focus:outline-none focus:border-crimson-600 focus:ring-2 focus:ring-crimson-100 transition shadow-sm">
+                                </div>
+                                <div class="space-y-2">
+                                    <label for="email" class="block text-xs font-bold text-slate-700 uppercase tracking-wider">Alamat Email</label>
+                                    <input type="email" id="email" name="Email" required placeholder="nama@email.com" class="w-full px-4 py-3 rounded-xl bg-white border border-slate-200 text-slate-900 text-sm focus:outline-none focus:border-crimson-600 focus:ring-2 focus:ring-crimson-100 transition shadow-sm">
+                                </div>
+                            </div>
+
+                            <div class="space-y-2">
+                                <label for="subjek" class="block text-xs font-bold text-slate-700 uppercase tracking-wider">Subjek / Topik</label>
+                                <input type="text" id="subjek" name="Subjek" required placeholder="Project Website / Diskusi Jaringan / Tawaran Kerja" class="w-full px-4 py-3 rounded-xl bg-white border border-slate-200 text-slate-900 text-sm focus:outline-none focus:border-crimson-600 focus:ring-2 focus:ring-crimson-100 transition shadow-sm">
+                            </div>
+
+                            <div class="space-y-2">
+                                <label for="pesan" class="block text-xs font-bold text-slate-700 uppercase tracking-wider">Pesan Anda</label>
+                                <textarea id="pesan" name="Pesan" rows="5" required placeholder="Tuliskan detail pesan atau pertanyaan Anda di sini..." class="w-full px-4 py-3 rounded-xl bg-white border border-slate-200 text-slate-900 text-sm focus:outline-none focus:border-crimson-600 focus:ring-2 focus:ring-crimson-100 transition shadow-sm resize-none"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full bg-crimson-600 hover:bg-crimson-700 text-white font-bold text-sm py-4 rounded-xl transition duration-300 shadow-xl shadow-crimson-600/25 flex items-center justify-center gap-2 group">
+                                <span>Kirim Pesan</span>
+                                <i class="fa-solid fa-paper-plane text-xs group-hover:translate-x-1 transition"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="py-8 px-6 border-t border-slate-200/80 bg-white relative z-10 text-xs text-slate-500">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p>&copy; 2026 <span class="text-crimson-600 font-semibold">Misbahul Anam Sidiq</span>. Created By MISBAHUL ANAM SIDIQ. All rights reserved.</p>
+            <div class="flex gap-5 text-base">
+                <a href="https://github.com/misbahulanam2206" target="_blank" class="text-slate-400 hover:text-crimson-600 transition"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/feed/" target="_blank" class="text-slate-400 hover:text-crimson-600 transition"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/misbah.anam22/" target="_blank" class="text-slate-400 hover:text-crimson-600 transition"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keahlian Utama | Misbahul Anam Sidiq</title>
+    
+    <!-- Font Inter & Playfair -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        crimson: {
+                            50: '#fff1f2',
+                            100: '#ffe4e6',
+                            200: '#fecdd3',
+                            300: '#fda4af',
+                            400: '#fb7185',
+                            500: '#f43f5e',
+                            600: '#e11d48',
+                            700: '#be123c',
+                            800: '#9f1239',
+                            900: '#881337',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(225, 29, 72, 0.12);
+        }
+        .glow-bright {
+            box-shadow: 0 20px 40px -15px rgba(225, 29, 72, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased min-h-screen py-16 px-6 relative overflow-x-hidden flex items-center justify-center">
+
+    <!-- Ambient Glow Background -->
+    <div class="fixed -top-40 -left-40 w-[600px] h-[600px] bg-rose-200/50 rounded-full blur-[140px] pointer-events-none z-0"></div>
+    <div class="fixed -bottom-40 -right-40 w-[550px] h-[550px] bg-amber-100/50 rounded-full blur-[150px] pointer-events-none z-0"></div>
+
+    <!-- KONTEN UTAMA KEAHLIAN -->
+    <main class="max-w-4xl w-full mx-auto relative z-10 space-y-8">
+        
+        <!-- Header Section -->
+        <div class="text-center space-y-3">
+            <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-rose-100/80 border border-rose-200 text-crimson-700 text-xs font-semibold tracking-wide uppercase shadow-sm">
+                <i class="fa-solid fa-layer-group text-crimson-600"></i> Capabilities
+            </span>
+            <h1 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
+                Keahlian & <span class="bg-gradient-to-r from-crimson-600 to-rose-500 bg-clip-text text-transparent">Kemampuan Utama</span>
+            </h1>
+            <p class="text-slate-500 text-sm max-w-md mx-auto">
+                Kombinasi latar belakang Infrastruktur Jaringan & Pengembangan Software/Sistem Informasi.
+            </p>
+        </div>
+
+        <!-- Grid Cards Keahlian -->
+        <div class="grid md:grid-cols-2 gap-6">
+
+            <!-- Card 1: Infrastruktur & Jaringan (Latar Belakang TKJ SMK YPPD) -->
+            <div class="glass-card rounded-3xl p-6 sm:p-8 glow-bright border border-rose-100 space-y-5">
+                <div class="flex items-center gap-4 border-b border-slate-200/80 pb-4">
+                    <div class="w-12 h-12 rounded-2xl bg-rose-100 text-crimson-600 flex items-center justify-center text-xl font-bold flex-shrink-0">
+                        <i class="fa-solid fa-network-wired"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-lg font-bold text-slate-900">Infrastruktur & Jaringan</h2>
+                        <p class="text-xs text-slate-500">Teknik Komputer & Jaringan (TKJ)</p>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <!-- Progress Bar Item 1 -->
+                    <div class="space-y-1.5">
+                        <div class="flex justify-between text-xs font-bold">
+                            <span class="text-slate-800">MikroTik & Routing Jaringan</span>
+                            <span class="text-crimson-600">85%</span>
+                        </div>
+                        <div class="w-full h-2 bg-slate-200/80 rounded-full overflow-hidden">
+                            <div class="h-full bg-gradient-to-r from-crimson-500 to-rose-500 rounded-full" style="width: 85%;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Progress Bar Item 2 -->
+                    <div class="space-y-1.5">
+                        <div class="flex justify-between text-xs font-bold">
+                            <span class="text-slate-800">Cisco Packet Tracer / Switching</span>
+                            <span class="text-crimson-600">80%</span>
+                        </div>
+                        <div class="w-full h-2 bg-slate-200/80 rounded-full overflow-hidden">
+                            <div class="h-full bg-gradient-to-r from-crimson-500 to-rose-500 rounded-full" style="width: 80%;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Progress Bar Item 3 -->
+                    <div class="space-y-1.5">
+                        <div class="flex justify-between text-xs font-bold">
+                            <span class="text-slate-800">Hardware & Linux Server Configuration</span>
+                            <span class="text-crimson-600">75%</span>
+                        </div>
+                        <div class="w-full h-2 bg-slate-200/80 rounded-full overflow-hidden">
+                            <div class="h-full bg-gradient-to-r from-crimson-500 to-rose-500 rounded-full" style="width: 75%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill Tags Network -->
+                <div class="flex flex-wrap gap-2 pt-2">
+                    <span class="px-3 py-1 bg-white border border-slate-200 text-slate-600 text-[11px] font-semibold rounded-lg shadow-sm">TCP/IP</span>
+                    <span class="px-3 py-1 bg-white border border-slate-200 text-slate-600 text-[11px] font-semibold rounded-lg shadow-sm">LAN/WAN</span>
+                    <span class="px-3 py-1 bg-white border border-slate-200 text-slate-600 text-[11px] font-semibold rounded-lg shadow-sm">Subnetting</span>
+                    <span class="px-3 py-1 bg-white border border-slate-200 text-slate-600 text-[11px] font-semibold rounded-lg shadow-sm">Debian/Ubuntu</span>
+                </div>
+            </div>
+
+            <!-- Card 2: Software & Web Development (Teknik Informatika STT NF) -->
+            <div class="glass-card rounded-3xl p-6 sm:p-8 glow-bright border border-rose-100 space-y-5">
+                <div class="flex items-center gap-4 border-b border-slate-200/80 pb-4">
+                    <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-600 flex items-center justify-center text-xl font-bold flex-shrink-0">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-lg font-bold text-slate-900">Pengembangan Web & Software</h2>
+                        <p class="text-xs text-slate-500">Studi Teknik Informatika S1</p>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <!-- Progress Bar Item 1 -->
+                    <div class="space-y-1.5">
+                        <div class="flex justify-between text-xs font-bold">
+                            <span class="text-slate-800">HTML5, CSS3 & Tailwind CSS</span>
+                            <span class="text-crimson-600">85%</span>
+                        </div>
+                        <div class="w-full h-2 bg-slate-200/80 rounded-full overflow-hidden">
+                            <div class="h-full bg-gradient-to-r from-crimson-500 to-rose-500 rounded-full" style="width: 85%;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Progress Bar Item 2 -->
+                    <div class="space-y-1.5">
+                        <div class="flex justify-between text-xs font-bold">
+                            <span class="text-slate-800">JavaScript / Pemrograman Web</span>
+                            <span class="text-crimson-600">75%</span>
+                        </div>
+                        <div class="w-full h-2 bg-slate-200/80 rounded-full overflow-hidden">
+                            <div class="h-full bg-gradient-to-r from-crimson-500 to-rose-500 rounded-full" style="width: 75%;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Progress Bar Item 3 -->
+                    <div class="space-y-1.5">
+                        <div class="flex justify-between text-xs font-bold">
+                            <span class="text-slate-800">Database (MySQL / Basis Data)</span>
+                            <span class="text-crimson-600">70%</span>
+                        </div>
+                        <div class="w-full h-2 bg-slate-200/80 rounded-full overflow-hidden">
+                            <div class="h-full bg-gradient-to-r from-crimson-500 to-rose-500 rounded-full" style="width: 70%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill Tags Web Dev -->
+                <div class="flex flex-wrap gap-2 pt-2">
+                    <span class="px-3 py-1 bg-white border border-slate-200 text-slate-600 text-[11px] font-semibold rounded-lg shadow-sm">Responsive Design</span>
+                    <span class="px-3 py-1 bg-white border border-slate-200 text-slate-600 text-[11px] font-semibold rounded-lg shadow-sm">Git & GitHub</span>
+                    <span class="px-3 py-1 bg-white border border-slate-200 text-slate-600 text-[11px] font-semibold rounded-lg shadow-sm">PHP/Python</span>
+                    <span class="px-3 py-1 bg-white border border-slate-200 text-slate-600 text-[11px] font-semibold rounded-lg shadow-sm">UI/UX Layout</span>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+</html>
