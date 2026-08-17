@@ -35,7 +35,8 @@
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif']
+                        serif: ['Playfair Display', 'serif'],
+                        tnr: ['"Times New Roman"', 'Times', 'serif']
                     }
                 }
             }
@@ -51,6 +52,12 @@
         .glow-bright {
             box-shadow: 0 20px 40px -15px rgba(225, 29, 72, 0.12);
         }
+        /* Custom Styling Effect for Times New Roman Intro Text */
+        .font-tnr-effect {
+            font-family: 'Times New Roman', Times, serif;
+            letter-spacing: 0.02em;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased selection:bg-crimson-500 selection:text-white min-h-screen relative overflow-x-hidden">
@@ -64,7 +71,7 @@
     <nav class="fixed top-0 left-0 w-full z-50 glass-card border-b border-rose-100/80 shadow-sm">
         <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
             <a href="#" class="font-serif text-2xl font-bold tracking-tight text-slate-900">
-                Misbah<span class="text-crimson-600">-</span>dev
+                Misbah<span class="text-crimson-600">-</span>developer
             </a>
             <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
                 <a href="about.html" class="hover:text-crimson-600 transition">Tentang</a>
@@ -72,9 +79,10 @@
                 <a href="project.html" class="hover:text-crimson-600 transition">Proyek</a>
                 <a href="kontak.html" class="hover:text-crimson-600 transition">Kontak</a>
             </div>
-            <a href="kontak.html" class="text-xs font-semibold bg-crimson-600 hover:bg-crimson-700 text-white px-5 py-2.5 rounded-full transition shadow-lg shadow-crimson-600/20">
-                Hubungi Saya
-            </a>
+            <a href="mailto:misbahulanamsidiq5@gmail.com" class="text-xs font-semibold bg-crimson-600 hover:bg-crimson-700 text-white px-5 py-2.5 rounded-full transition shadow-lg shadow-crimson-600/20 flex items-center gap-2">
+    <i class="fa-solid fa-envelope text-xs"></i>
+    <span>Hubungi Saya</span>
+</a>
         </div>
     </nav>
 
@@ -85,20 +93,25 @@
                 <span class="w-2 h-2 rounded-full bg-crimson-600 animate-ping"></span> Welcome to My Portofolio
             </span>
             <h1 class="text-4xl sm:text-6xl font-black text-slate-900 tracking-tight leading-tight">
-                Perkenalkan saya <span class="bg-gradient-to-r from-crimson-600 to-rose-500 bg-clip-text text-transparent">Misbahul Anam Sidiq</span>
+                Halo, Saya <span class="bg-gradient-to-r from-crimson-600 to-rose-500 bg-clip-text text-transparent">Misbahul Anam Sidiq</span>
             </h1>
             <p class="text-lg sm:text-xl font-semibold text-crimson-700 max-w-2xl mx-auto">
-                Web Development & Frontend Engineer
+                Frontend Engineer & Web Development
             </p>
-            <p class="text-slate-600 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
-                Seorang Mahasiswa<strong class="text-slate-900"> prodi Teknik Informatika</strong> di <strong class="text-slate-900">STT Terpadu Nurul Fikri</strong> dengan latar belakang jaringan dari <strong class="text-slate-900">SMK YPPD</strong>.
-            </p>
+            
+            <!-- Deskripsi Perkenalan Utama dengan Font Times New Roman + Efek Style -->
+            <div class="font-tnr-effect text-slate-700 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed italic border-x-2 border-crimson-500/30 px-6 py-3 bg-white/40 rounded-lg shadow-sm space-y-3">
+                <p>
+                    "Perkenalkan, nama lengkap saya <strong class="text-slate-900 font-bold not-italic">Misbahul Anam Sidiq</strong> dan biasa dipanggil <strong class="text-crimson-700 font-bold not-italic">Misbah</strong>. Saya merupakan alumni dari <strong class="text-slate-900 font-bold not-italic">SMK YPPD</strong> jurusan Teknik Komputer dan Jaringan (TKJ), dan saat ini aktif sebagai mahasiswa jurusan Teknik Informatika di <strong class="text-slate-900 font-bold not-italic">STT Terpadu Nurul Fikri</strong>."
+                </p>
+            </div>
+
             <div class="flex flex-wrap justify-center gap-4 pt-4">
-                <a href="project.html" class="bg-crimson-600 hover:bg-crimson-700 text-white font-semibold text-sm px-8 py-3.5 rounded-xl transition shadow-xl shadow-crimson-600/25 flex items-center gap-2">
+                <a href="#proyek" class="bg-crimson-600 hover:bg-crimson-700 text-white font-semibold text-sm px-8 py-3.5 rounded-xl transition shadow-xl shadow-crimson-600/25 flex items-center gap-2">
                     <span>Lihat Proyek Saya</span>
                     <i class="fa-solid fa-arrow-right text-xs"></i>
                 </a>
-                <a href="about.html" class="bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 font-semibold text-sm px-8 py-3.5 rounded-xl transition shadow-sm">
+                <a href="#tentang" class="bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 font-semibold text-sm px-8 py-3.5 rounded-xl transition shadow-sm">
                     Tentang Saya
                 </a>
             </div>
@@ -121,13 +134,50 @@
                     <h2 class="text-3xl font-bold text-slate-900">
                         Mahasiswa <span class="text-crimson-600">STT Terpadu Nurul Fikri</span> Prodi Teknik Informatika
                     </h2>
-                    <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
-                        Halo! Saya Misbahul Anam Sidiq, biasa dipanggil Misbah. Saya merupakan lulusan dari SMK YPPD jurusan Teknik Komputer dan Jaringan (TKJ) yang membekali saya dengan pemahaman kuat di bidang infrastruktur jaringan dan sistem komputer. Saat ini, saya melanjutkan studi di STT Terpadu Nurul Fikri jurusan Teknik Informatika. Saya fokus mengembangkan aplikasi web interaktif, bersih, serta berkinerja tinggi.
-                    </p>
+                    
+                    <!-- Deskripsi Detail dengan Font Times New Roman + Efek Style + Tautan Social Media -->
+                    <div class="font-tnr-effect text-slate-700 text-base leading-relaxed space-y-3 bg-rose-50/50 p-5 rounded-xl border border-rose-100">
+                        <p>
+                            Salam kenal! Saya <strong class="text-slate-900">Misbahul Anam Sidiq</strong> (biasa dipanggil <strong class="text-crimson-700">Misbah</strong>). Perjalanan saya di dunia IT dimulai dari <strong class="text-slate-900">SMK YPPD</strong> jurusan Teknik Komputer dan Jaringan (TKJ) yang memperkuat pemahaman saya mengenai jaringan, routing, dan arsitektur server.
+                        </p>
+                        <p>
+                            Saat ini saya sedang menempuh studi S1 Teknik Informatika di <strong class="text-slate-900">STT Terpadu Nurul Fikri</strong>. Saya berfokus pada pengembangan aplikasi web, arsitektur RESTful API, dan sistem basis data.
+                        </p>
+                        
+                        <!-- Social Media di dalam Deskripsi -->
+                        <div class="pt-2 border-t border-rose-200/60 flex items-center justify-between">
+                            <span class="text-xs font-sans font-semibold text-slate-500 uppercase tracking-wider">Social Media & Portofolio:</span>
+                            <div class="flex gap-4 text-lg">
+                                <a href="https://github.com/misbahulanam2206" target="_blank" class="text-slate-600 hover:text-crimson-600 transition" title="GitHub">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/feed/" target="_blank" class="text-slate-600 hover:text-crimson-600 transition" title="LinkedIn">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                </a>
+                                <a href="https://www.instagram.com/misbah.anam22/" target="_blank" class="text-slate-600 hover:text-crimson-600 transition" title="Instagram">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Badge Tools yang Digunakan -->
+                    <div class="pt-2">
+                        <span class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Tools & Teknologi Saat Ini:</span>
+                        <div class="flex flex-wrap gap-2 text-xs font-semibold">
+                            <span class="px-3 py-1.5 bg-white border border-slate-200 text-slate-700 rounded-lg shadow-sm flex items-center gap-1.5"><i class="fa-brands fa-node-js text-emerald-600"></i> Node.js & Express</span>
+                            <span class="px-3 py-1.5 bg-white border border-slate-200 text-slate-700 rounded-lg shadow-sm flex items-center gap-1.5"><i class="fa-solid fa-database text-blue-600"></i> MySQL</span>
+                            <span class="px-3 py-1.5 bg-white border border-slate-200 text-slate-700 rounded-lg shadow-sm flex items-center gap-1.5"><i class="fa-brands fa-git-alt text-orange-600"></i> Git & GitHub</span>
+                            <span class="px-3 py-1.5 bg-white border border-slate-200 text-slate-700 rounded-lg shadow-sm flex items-center gap-1.5"><i class="fa-brands fa-figma text-purple-600"></i> Figma</span>
+                            <span class="px-3 py-1.5 bg-white border border-slate-200 text-slate-700 rounded-lg shadow-sm flex items-center gap-1.5"><i class="fa-solid fa-code text-slate-800"></i> VS Code</span>
+                            <span class="px-3 py-1.5 bg-white border border-slate-200 text-slate-700 rounded-lg shadow-sm flex items-center gap-1.5"><i class="fa-solid fa-network-wired text-crimson-600"></i> MikroTik RouterOS</span>
+                        </div>
+                    </div>
+
                     <div class="grid grid-cols-2 gap-4 pt-4 border-t border-slate-200">
                         <div class="p-4 bg-white/80 rounded-xl border border-slate-200/80 shadow-sm">
                             <span class="block text-xs text-slate-500 font-semibold mb-1">Pendidikan SMK</span>
-                            <span class="text-sm font-bold text-slate-800">SMK YPPD <br><span class="text-xs font-normal text-slate-600">Teknik Komputer dan Jaringan (TKJ)</span></span>
+                            <span class="text-sm font-bold text-slate-800">SMK YPPD <br><span class="text-xs font-normal text-slate-600">Teknik Komputer & Jaringan (TKJ)</span></span>
                         </div>
                         <div class="p-4 bg-white/80 rounded-xl border border-slate-200/80 shadow-sm">
                             <span class="block text-xs text-slate-500 font-semibold mb-1">Pendidikan Tinggi</span>
@@ -153,7 +203,7 @@
                         <i class="fa-solid fa-network-wired"></i>
                     </div>
                     <h3 class="text-lg font-bold text-slate-900 mb-2">Jaringan & Sistem</h3>
-                    <p class="text-xs text-slate-600 leading-relaxed">Konfigurasi MikroTik, Topologi Jaringan, IP Addressing, & Administrasi Server Dasar (Alumni TKJ).</p>
+                    <p class="text-xs text-slate-600 leading-relaxed">Konfigurasi MikroTik RouterOS, Topologi Jaringan, Subnetting, IP Addressing, & Server Linux (Alumni TKJ SMK YPPD).</p>
                 </div>
                 <!-- Keahlian 2 -->
                 <div class="p-6 rounded-2xl glass-card bg-white hover:border-crimson-300 transition duration-300 shadow-sm hover:shadow-md group">
@@ -161,15 +211,15 @@
                         <i class="fa-solid fa-code"></i>
                     </div>
                     <h3 class="text-lg font-bold text-slate-900 mb-2">Web Development</h3>
-                    <p class="text-xs text-slate-600 leading-relaxed">HTML5, CSS3, JavaScript, PHP, React.js, Node.js, Express, & Database MySQL.</p>
+                    <p class="text-xs text-slate-600 leading-relaxed">Backend Development dengan Node.js, Express.js, RESTful API, Database MySQL, HTML5, CSS3, JavaScript, & Tailwind CSS.</p>
                 </div>
                 <!-- Keahlian 3 -->
                 <div class="p-6 rounded-2xl glass-card bg-white hover:border-crimson-300 transition duration-300 shadow-sm hover:shadow-md group">
                     <div class="w-12 h-12 rounded-xl bg-rose-100 text-crimson-600 flex items-center justify-center text-xl mb-4 group-hover:bg-crimson-600 group-hover:text-white transition duration-300">
                         <i class="fa-solid fa-palette"></i>
                     </div>
-                    <h3 class="text-lg font-bold text-slate-900 mb-2">Graphic Design</h3>
-                    <p class="text-xs text-slate-600 leading-relaxed">Perancangan Visual, Branding Logo, Prototyping UI/UX, & Adobe Illustrator.</p>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Graphic Design & UI/UX</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">Perancangan Visual, Prototyping UI/UX dengan Figma, Photoshop/Lightroom Photo Editing, & Asset Layout.</p>
                 </div>
             </div>
         </div>
@@ -183,12 +233,15 @@
                 <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">Proyek Pilihan</h2>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Proyek 1 -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+                <!-- Proyek 1: Rachma Laundry Mart -->
                 <div class="group bg-white border border-slate-200/80 rounded-2xl overflow-hidden hover:border-rose-300 transition duration-300 hover:-translate-y-1 shadow-sm hover:shadow-lg flex flex-col justify-between">
                     <div>
-                        <div class="aspect-video relative overflow-hidden bg-slate-100">
-                            <img src="images/rachma laundry.png" alt="Website E-Commerce UMKM Laundry" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?q=80&w=600'">
+                        <div class="w-full h-56 bg-slate-100 relative group flex items-center justify-center p-2 border-b border-slate-100">
+                            <img src="images/rachma laundry.png" 
+                                 alt="Website E-Commerce UMKM Laundry - Rachma Laundry Mart" 
+                                 class="w-full h-full object-contain object-top group-hover:scale-105 transition duration-500" 
+                                 onerror="this.src='https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?q=80&w=600'">
                             <span class="absolute top-3 right-3 bg-white/90 backdrop-blur-md text-crimson-700 text-[10px] font-bold px-3 py-1 rounded-full border border-rose-100 shadow-sm">
                                 Web App
                             </span>
@@ -204,16 +257,19 @@
                     </div>
                     <div class="px-6 pb-6 pt-2">
                         <span class="inline-flex items-center gap-1.5 text-[11px] font-semibold text-crimson-700 bg-rose-50 px-3 py-1.5 rounded-lg border border-rose-100 w-full">
-                            <i class="fa-solid fa-code-branch text-xs"></i> HTML, CSS, JS
+                            <i class="fa-solid fa-code-branch text-xs"></i> HTML, CSS, JS, MySQL
                         </span>
                     </div>
                 </div>
 
-                <!-- Proyek 2 -->
+                <!-- Proyek 2: KIP-K Tracker -->
                 <div class="group bg-white border border-slate-200/80 rounded-2xl overflow-hidden hover:border-rose-300 transition duration-300 hover:-translate-y-1 shadow-sm hover:shadow-lg flex flex-col justify-between">
                     <div>
-                        <div class="aspect-video relative overflow-hidden bg-slate-100">
-                            <img src="images/kipk application.png" alt="Aplikasi Mobile KIP Kuliah Tracker" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?q=80&w=600'">
+                        <div class="w-full h-56 bg-white relative group flex items-center justify-center p-4 border-b border-slate-100">
+                            <img src="images/kipk application.png" 
+                                 alt="Aplikasi Mobile KIP Kuliah Tracker - STT NF" 
+                                 class="w-full h-full object-contain object-center group-hover:scale-105 transition duration-500" 
+                                 onerror="this.src='https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?q=80&w=600'">
                             <span class="absolute top-3 right-3 bg-white/90 backdrop-blur-md text-crimson-700 text-[10px] font-bold px-3 py-1 rounded-full border border-rose-100 shadow-sm">
                                 Aplikasi MOBILE
                             </span>
@@ -223,57 +279,63 @@
                                 Aplikasi Mobile KIP Kuliah Tracker
                             </h3>
                             <p class="text-slate-600 text-xs leading-relaxed">
-                                Platform berbasis web untuk membantu memantau dan memverifikasi alur pencairan serta status pengajuan KIP Kuliah secara efisien.
+                                Platform berbasis web & mobile untuk memantau serta memverifikasi alur pencairan dan pencatatan keuangan KIP Kuliah.
                             </p>
                         </div>
                     </div>
                     <div class="px-6 pb-6 pt-2">
                         <span class="inline-flex items-center gap-1.5 text-[11px] font-semibold text-crimson-700 bg-rose-50 px-3 py-1.5 rounded-lg border border-rose-100 w-full">
-                            <i class="fa-solid fa-code-branch text-xs"></i> HTML, CSS, JS, Node.js, React.js
+                            <i class="fa-solid fa-code-branch text-xs"></i> Node.js, Express, React, MySQL
                         </span>
                     </div>
                 </div>
 
-                <!-- Proyek 3 -->
+                <!-- Proyek 3: KAI Commuter (C-Access) -->
                 <div class="group bg-white border border-slate-200/80 rounded-2xl overflow-hidden hover:border-rose-300 transition duration-300 hover:-translate-y-1 shadow-sm hover:shadow-lg flex flex-col justify-between">
                     <div>
-                        <div class="aspect-video relative overflow-hidden bg-slate-100">
-                            <img src="images/kai-commuter.png" alt="Landing Page KAI Commuter" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?q=80&w=600'">
+                        <div class="w-full h-56 bg-slate-50 relative group flex items-center justify-center p-2 border-b border-slate-100">
+                            <img src="images/kai-commuter.png" 
+                                 alt="Landing Page & Interface Aplikasi C-Access KAI Commuter" 
+                                 class="w-full h-full object-contain object-top group-hover:scale-105 transition duration-500" 
+                                 onerror="this.src='https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?q=80&w=600'">
                             <span class="absolute top-3 right-3 bg-white/90 backdrop-blur-md text-crimson-700 text-[10px] font-bold px-3 py-1 rounded-full border border-rose-100 shadow-sm">
-                                Web UI
+                                Web UI / Mobile UI
                             </span>
                         </div>
                         <div class="p-6 space-y-3">
                             <h3 class="text-lg font-bold text-slate-900 group-hover:text-crimson-600 transition">
-                                Landing Page KAI Commuter
+                                Redesain UI Aplikasi C-Access KAI Commuter
                             </h3>
                             <p class="text-slate-600 text-xs leading-relaxed">
-                                Redesain antarmuka informasi layanan KRL Commuter Line Jabodetabek yang modern, cepat, dan responsif di berbagai perangkat.
+                                Redesain antarmuka informasi layanan KRL Commuter Line Jabodetabek yang modern, terintegrasi informasi saldo KMT, fitur jadwal, rute, dan stasiun.
                             </p>
                         </div>
                     </div>
                     <div class="px-6 pb-6 pt-2">
                         <span class="inline-flex items-center gap-1.5 text-[11px] font-semibold text-crimson-700 bg-rose-50 px-3 py-1.5 rounded-lg border border-rose-100 w-full">
-                            <i class="fa-solid fa-code-branch text-xs"></i> HTML, Tailwind CSS, JS
+                            <i class="fa-solid fa-code-branch text-xs"></i> HTML, Tailwind CSS, JS, Figma
                         </span>
                     </div>
                 </div>
 
-                <!-- Proyek 4 -->
+                <!-- Proyek 4: Landing Page Elearning STT NF (e-Elena) -->
                 <div class="group bg-white border border-slate-200/80 rounded-2xl overflow-hidden hover:border-rose-300 transition duration-300 hover:-translate-y-1 shadow-sm hover:shadow-lg flex flex-col justify-between">
                     <div>
-                        <div class="aspect-video relative overflow-hidden bg-slate-100">
-                            <img src="images/ELENA STT NF.png" alt="Landing page Elearning STT NF" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?q=80&w=600'">
+                        <div class="w-full h-56 bg-slate-900 relative group flex items-center justify-center p-2 border-b border-slate-800">
+                            <img src="images/ELENA STT NF.png" 
+                                 alt="Landing Page Elearning e-Elena STT NF - Dashboard Akademik" 
+                                 class="w-full h-full object-cover object-left-top group-hover:scale-105 transition duration-500" 
+                                 onerror="this.src='https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?q=80&w=600'">
                             <span class="absolute top-3 right-3 bg-white/90 backdrop-blur-md text-crimson-700 text-[10px] font-bold px-3 py-1 rounded-full border border-rose-100 shadow-sm">
                                 Website STT NF
                             </span>
                         </div>
                         <div class="p-6 space-y-3">
                             <h3 class="text-lg font-bold text-slate-900 group-hover:text-crimson-600 transition">
-                                Landing page Elearning STT NF
+                                Landing Page Elearning STT NF (e-Elena)
                             </h3>
                             <p class="text-slate-600 text-xs leading-relaxed">
-                                informasi tentang Pembelajaran MataKuliah yang dengan tampilan lebih fresh, modern, cepat, dan responsif
+                                Dashboard akademik platform e-learning modern yang menyajikan informasi mata kuliah aktif, status pengumpulan tugas per semester, dan kuis secara responsif.
                             </p>
                         </div>
                     </div>
@@ -283,6 +345,7 @@
                         </span>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -293,30 +356,28 @@
             <span class="text-xs font-bold uppercase tracking-widest text-crimson-600 bg-rose-100 px-3 py-1 rounded-md">Mari Berkolaborasi</span>
             <h2 class="text-3xl font-bold text-slate-900">Tertarik Berkolaborasi dalam Proyek IT & Pengembangan Web?</h2>
             <p class="text-slate-600 text-sm max-w-lg mx-auto">
-                Saya selalu terbuka untuk diskusi proyek web, jaringan, maupun peluang kolaborasi menarik lainnya.
+                Saya selalu terbuka untuk diskusi proyek web development, pengelolaan database, infrastruktur jaringan, maupun peluang kolaborasi menarik lainnya.
             </p>
-            <div class="flex flex-wrap justify-center gap-4 pt-2">
-                <a href="https://wa.me/6285697587484" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm px-6 py-3 rounded-xl transition shadow-md flex items-center gap-2">
-                    <i class="fa-brands fa-whatsapp text-base"></i> Chat WhatsApp
-                </a>
-                <a href="mailto:misbahulanamsidiq5@gmail.com" class="bg-crimson-600 hover:bg-crimson-700 text-white font-semibold text-sm px-6 py-3 rounded-xl transition shadow-md flex items-center gap-2">
-                    <i class="fa-solid fa-envelope text-base"></i> Kirim Email
-                </a>
-            </div>
-        </div>
+
+   <div class="flex justify-center pt-2">
+    <!-- Tombol Khusus WhatsApp -->
+    <a href="https://wa.me/6285697587484" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm px-8 py-3.5 rounded-xl transition duration-300 shadow-lg shadow-emerald-600/20 flex items-center justify-center gap-2.5 group">
+        <i class="fa-brands fa-whatsapp text-lg group-hover:scale-110 transition duration-300"></i>
+        <span>Hubungi Saya</span>
+    </a>
+</div>
+    </div>
+</div>
     </section>
 
     <!-- FOOTER -->
     <footer class="py-8 px-6 border-t border-slate-200/80 bg-white relative z-10 text-xs text-slate-500">
-        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p>&copy; 2026 <span class="text-crimson-600 font-semibold">Misbahul Anam Sidiq</span>. Created By MISBAHUL ANAM SIDIQ All rights reserved.</p>
-            <div class="flex gap-5 text-base">
-                <a href="https://github.com/misbahulanam2206" target="_blank" class="text-slate-400 hover:text-crimson-600 transition"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.linkedin.com/feed/" target="_blank" class="text-slate-400 hover:text-crimson-600 transition"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://www.instagram.com/misbah.anam22/" target="_blank" class="text-slate-400 hover:text-crimson-600 transition"><i class="fa-brands fa-instagram"></i></a>
-            </div>
+        <div class="flex items-center gap-2 text-xs font-medium text-slate-600">
+            <span class="w-2 h-2 rounded-full bg-crimson-600 animate-pulse"></span>
+            <p>
+                &copy; 2026 <span class="bg-gradient-to-r from-crimson-600 to-rose-500 bg-clip-text text-transparent font-bold">Misbahul Anam Sidiq</span>. All rights reserved.
+            </p>
         </div>
     </footer>
-
 </body>
-</html> 
+</html>
