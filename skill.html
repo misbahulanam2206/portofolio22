@@ -48,16 +48,71 @@
             backdrop-filter: blur(16px);
             border: 1px solid rgba(225, 29, 72, 0.12);
         }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(225, 29, 72, 0.1);
+        }
         .glow-bright {
-            box-shadow: 0 20px 40px -15px rgba(225, 29, 72, 0.15);
+            box-shadow: 0 20px 40px -15px rgba(225, 29, 72, 0.12);
         }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased min-h-screen py-16 px-6 relative overflow-x-hidden flex items-center justify-center">
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-crimson-500 selection:text-white min-h-screen pt-28 pb-16 px-6 relative overflow-x-hidden flex flex-col justify-between items-center">
 
-    <!-- Ambient Glow Background -->
+    <!-- Ambient Background Glow -->
     <div class="fixed -top-40 -left-40 w-[600px] h-[600px] bg-rose-200/50 rounded-full blur-[140px] pointer-events-none z-0"></div>
-    <div class="fixed -bottom-40 -right-40 w-[550px] h-[550px] bg-amber-100/50 rounded-full blur-[150px] pointer-events-none z-0"></div>
+    <div class="fixed top-1/3 -right-40 w-[500px] h-[500px] bg-crimson-100/60 rounded-full blur-[140px] pointer-events-none z-0"></div>
+    <div class="fixed -bottom-40 left-1/3 w-[550px] h-[550px] bg-amber-100/50 rounded-full blur-[150px] pointer-events-none z-0"></div>
+
+    <!-- NAVBAR RESPONSIF (DESKTOP & MOBILE) -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-nav">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            
+            <!-- Logo / Branding -->
+            <a href="index.html" class="flex items-center gap-2 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-crimson-600 to-rose-500 text-white flex items-center justify-center font-black text-lg shadow-md group-hover:scale-105 transition-transform">
+                    M
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-extrabold text-slate-900 text-sm tracking-tight leading-none">Misbahul Anam</span>
+                    <span class="text-[10px] text-slate-500 font-medium">Portfolio</span>
+                </div>
+            </a>
+
+            <!-- Navigasi Desktop -->
+            <nav>
+            <a href="index.html" class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-rose-50 hover:text-crimson-600 transition">Beranda</a>
+            <a href="skill.html" class="block px-4 py-2.5 rounded-xl text-sm font-bold text-crimson-600 bg-rose-50 border border-rose-100 transition">Skill</a>
+            <a href="aktivitas.html" class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-rose-50 hover:text-crimson-600 transition">Aktivitas</a>
+            <a href="sertifikat.html" class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-rose-50 hover:text-crimson-600 transition">Sertifikat</a>
+            <a href="proyek.html" class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-rose-50 hover:text-crimson-600 transition">Project</a>
+            <a href="kontak.html" class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-rose-50 hover:text-crimson-600 transition">Kontak</a>
+        </nav>
+
+            <!-- Tombol Action & Mobile Menu Toggle -->
+            <div class="flex items-center gap-3">
+                <a href="mailto:misbahulanamsidiq5@gmail.com" class="text-xs font-semibold bg-crimson-600 hover:bg-crimson-700 text-white px-5 py-2.5 rounded-full transition shadow-lg shadow-crimson-600/20 flex items-center gap-2">
+                    <i class="fa-solid fa-envelope text-xs"></i>
+                    <span>Hubungi Saya</span>
+                </a>
+
+                <button id="mobile-menu-btn" class="md:hidden w-10 h-10 rounded-xl bg-slate-100 border border-slate-200 text-slate-700 flex items-center justify-center hover:bg-rose-50 hover:text-crimson-600 transition" aria-label="Toggle Menu">
+                    <i id="menu-icon" class="fa-solid fa-bars text-lg"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Menu Mobile Overlay -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200/60 bg-white/95 backdrop-blur-lg px-6 py-4 space-y-2 shadow-xl">
+            <a href="index.html" class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-rose-50 hover:text-crimson-600 transition">Beranda</a>
+            <a href="skill.html" class="block px-4 py-2.5 rounded-xl text-sm font-bold text-crimson-600 bg-rose-50 border border-rose-100 transition">Skill</a>
+            <a href="aktivitas.html" class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-rose-50 hover:text-crimson-600 transition">Aktivitas</a>
+            <a href="sertifikat.html" class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-rose-50 hover:text-crimson-600 transition">Sertifikat</a>
+            <a href="proyek.html" class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-rose-50 hover:text-crimson-600 transition">Project</a>
+            <a href="kontak.html" class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-rose-50 hover:text-crimson-600 transition">Kontak</a>
+        </div>
+    </header>
 
     <!-- KONTEN UTAMA KEAHLIAN -->
     <main class="max-w-4xl w-full mx-auto relative z-10 space-y-8">
@@ -71,7 +126,7 @@
                 Keahlian & <span class="bg-gradient-to-r from-crimson-600 to-rose-500 bg-clip-text text-transparent">Kemampuan Utama</span>
             </h1>
             <p class="text-slate-500 text-sm max-w-md mx-auto">
-                Kombinasi latar belakang Infrastruktur Jaringan, Software Development, & Desain Visual.
+                Kombinasi latar belakang Infrastruktur Jaringan, Frontend & Web Development, serta Kreativitas Desain Visual.
             </p>
         </div>
 
@@ -86,14 +141,14 @@
                     </div>
                     <div>
                         <h2 class="text-lg font-bold text-slate-900">Infrastruktur & Jaringan</h2>
-                        <p class="text-xs text-slate-500">Teknik Komputer & Jaringan (TKJ)</p>
+                        <p class="text-xs text-slate-500">Teknik Komputer & Jaringan (SMK YPPD)</p>
                     </div>
                 </div>
 
                 <div class="space-y-4">
                     <div class="space-y-1.5">
                         <div class="flex justify-between text-xs font-bold">
-                            <span class="text-slate-800">MikroTik & Routing Jaringan</span>
+                            <span class="text-slate-800">MikroTik RouterOS & Routing</span>
                             <span class="text-crimson-600">85%</span>
                         </div>
                         <div class="w-full h-2 bg-slate-200/80 rounded-full overflow-hidden">
@@ -138,7 +193,7 @@
                     </div>
                     <div>
                         <h2 class="text-lg font-bold text-slate-900">Pengembangan Web & Software</h2>
-                        <p class="text-xs text-slate-500">Studi Teknik Informatika S1</p>
+                        <p class="text-xs text-slate-500">Teknik Informatika S1 (STT NF)</p>
                     </div>
                 </div>
 
@@ -155,21 +210,21 @@
 
                     <div class="space-y-1.5">
                         <div class="flex justify-between text-xs font-bold">
-                            <span class="text-slate-800">JavaScript / Pemrograman Web</span>
-                            <span class="text-crimson-600">75%</span>
+                            <span class="text-slate-800">Node.js & Express / JavaScript</span>
+                            <span class="text-crimson-600">80%</span>
                         </div>
                         <div class="w-full h-2 bg-slate-200/80 rounded-full overflow-hidden">
-                            <div class="h-full bg-gradient-to-r from-crimson-500 to-rose-500 rounded-full" style="width: 75%;"></div>
+                            <div class="h-full bg-gradient-to-r from-crimson-500 to-rose-500 rounded-full" style="width: 80%;"></div>
                         </div>
                     </div>
 
                     <div class="space-y-1.5">
                         <div class="flex justify-between text-xs font-bold">
                             <span class="text-slate-800">Database (MySQL / Basis Data)</span>
-                            <span class="text-crimson-600">70%</span>
+                            <span class="text-crimson-600">75%</span>
                         </div>
                         <div class="w-full h-2 bg-slate-200/80 rounded-full overflow-hidden">
-                            <div class="h-full bg-gradient-to-r from-crimson-500 to-rose-500 rounded-full" style="width: 70%;"></div>
+                            <div class="h-full bg-gradient-to-r from-crimson-500 to-rose-500 rounded-full" style="width: 75%;"></div>
                         </div>
                     </div>
                 </div>
@@ -177,8 +232,8 @@
                 <div class="flex flex-wrap gap-2 pt-2">
                     <span class="px-3 py-1 bg-white border border-slate-200 text-slate-600 text-[11px] font-semibold rounded-lg shadow-sm">Responsive Design</span>
                     <span class="px-3 py-1 bg-white border border-slate-200 text-slate-600 text-[11px] font-semibold rounded-lg shadow-sm">Git & GitHub</span>
-                    <span class="px-3 py-1 bg-white border border-slate-200 text-slate-600 text-[11px] font-semibold rounded-lg shadow-sm">PHP/Python</span>
-                    <span class="px-3 py-1 bg-white border border-slate-200 text-slate-600 text-[11px] font-semibold rounded-lg shadow-sm">UI/UX Layout</span>
+                    <span class="px-3 py-1 bg-white border border-slate-200 text-slate-600 text-[11px] font-semibold rounded-lg shadow-sm">RESTful API</span>
+                    <span class="px-3 py-1 bg-white border border-slate-200 text-slate-700 text-[11px] font-semibold rounded-lg shadow-sm">VS Code</span>
                 </div>
             </div>
 
@@ -189,8 +244,8 @@
                         <i class="fa-solid fa-camera-retro"></i>
                     </div>
                     <div>
-                        <h2 class="text-lg font-bold text-slate-900">Fotografi & Pengeditan Foto</h2>
-                        <p class="text-xs text-slate-500">Kreativitas Visual & Post-Processing</p>
+                        <h2 class="text-lg font-bold text-slate-900">Desain Visual & Pengeditan Foto</h2>
+                        <p class="text-xs text-slate-500">Kreativitas Visual, Prototyping UI & Post-Processing</p>
                     </div>
                 </div>
 
@@ -198,21 +253,21 @@
                     <div class="space-y-4">
                         <div class="space-y-1.5">
                             <div class="flex justify-between text-xs font-bold">
-                                <span class="text-slate-800">Fotografi Produk & Portrait</span>
-                                <span class="text-crimson-600">80%</span>
+                                <span class="text-slate-800">UI/UX Prototyping (Figma)</span>
+                                <span class="text-crimson-600">85%</span>
                             </div>
                             <div class="w-full h-2 bg-slate-200/80 rounded-full overflow-hidden">
-                                <div class="h-full bg-gradient-to-r from-crimson-500 to-rose-500 rounded-full" style="width: 80%;"></div>
+                                <div class="h-full bg-gradient-to-r from-crimson-500 to-rose-500 rounded-full" style="width: 85%;"></div>
                             </div>
                         </div>
 
                         <div class="space-y-1.5">
                             <div class="flex justify-between text-xs font-bold">
                                 <span class="text-slate-800">Adobe Photoshop / Retouching</span>
-                                <span class="text-crimson-600">85%</span>
+                                <span class="text-crimson-600">80%</span>
                             </div>
                             <div class="w-full h-2 bg-slate-200/80 rounded-full overflow-hidden">
-                                <div class="h-full bg-gradient-to-r from-crimson-500 to-rose-500 rounded-full" style="width: 85%;"></div>
+                                <div class="h-full bg-gradient-to-r from-crimson-500 to-rose-500 rounded-full" style="width: 80%;"></div>
                             </div>
                         </div>
                     </div>
@@ -230,7 +285,7 @@
 
                         <div class="space-y-1.5">
                             <div class="flex justify-between text-xs font-bold">
-                                <span class="text-slate-800">Manipulasi Gambar & Asset Digital</span>
+                                <span class="text-slate-800">Fotografi Produk & Asset Layout</span>
                                 <span class="text-crimson-600">75%</span>
                             </div>
                             <div class="w-full h-2 bg-slate-200/80 rounded-full overflow-hidden">
@@ -241,11 +296,11 @@
                 </div>
 
                 <div class="flex flex-wrap gap-2 pt-2">
+                    <span class="px-3 py-1 bg-white border border-slate-200 text-slate-600 text-[11px] font-semibold rounded-lg shadow-sm">Figma UI/UX</span>
                     <span class="px-3 py-1 bg-white border border-slate-200 text-slate-600 text-[11px] font-semibold rounded-lg shadow-sm">Photo Editing</span>
                     <span class="px-3 py-1 bg-white border border-slate-200 text-slate-600 text-[11px] font-semibold rounded-lg shadow-sm">Adobe Photoshop</span>
                     <span class="px-3 py-1 bg-white border border-slate-200 text-slate-600 text-[11px] font-semibold rounded-lg shadow-sm">Lightroom</span>
                     <span class="px-3 py-1 bg-white border border-slate-200 text-slate-600 text-[11px] font-semibold rounded-lg shadow-sm">Color Correction</span>
-                    <span class="px-3 py-1 bg-white border border-slate-200 text-slate-600 text-[11px] font-semibold rounded-lg shadow-sm">Digital Composition</span>
                 </div>
             </div>
 
@@ -253,5 +308,29 @@
 
     </main>
 
+    <!-- FOOTER -->
+    <footer class="w-full py-8 px-6 border-t border-slate-200/80 bg-white relative z-10 text-xs text-slate-500 mt-16">
+        <div class="max-w-6xl mx-auto text-center">
+            <p>&copy; 2026 <span class="text-crimson-600 font-semibold">Misbahul Anam Sidiq</span>. Created By MISBAHUL ANAM SIDIQ. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Script Toggling Mobile Menu -->
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const icon = document.getElementById('menu-icon');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            if (menu.classList.contains('hidden')) {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            }
+        });
+    </script>
 </body>
 </html>
