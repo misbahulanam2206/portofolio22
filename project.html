@@ -47,19 +47,78 @@
             backdrop-filter: blur(16px);
             border: 1px solid rgba(225, 29, 72, 0.12);
         }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(225, 29, 72, 0.1);
+        }
         .glow-bright {
             box-shadow: 0 20px 40px -15px rgba(225, 29, 72, 0.12);
         }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased min-h-screen py-16 px-6 relative overflow-x-hidden flex flex-col justify-between items-center">
+<body class="bg-slate-50 text-slate-800 antialiased min-h-screen pt-28 pb-16 px-6 relative overflow-x-hidden flex flex-col justify-between items-center">
 
     <!-- Ambient Background Glow -->
     <div class="fixed -top-40 -left-40 w-[600px] h-[600px] bg-rose-200/50 rounded-full blur-[140px] pointer-events-none z-0"></div>
     <div class="fixed -bottom-40 -right-40 w-[550px] h-[550px] bg-amber-100/50 rounded-full blur-[150px] pointer-events-none z-0"></div>
 
+    <!-- NAVBAR RESPONSIF (DESKTOP & MOBILE) -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-nav">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            
+            <!-- Logo / Branding -->
+            <a href="#beranda" class="flex items-center gap-2 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-crimson-600 to-rose-500 text-white flex items-center justify-center font-black text-lg shadow-md group-hover:scale-105 transition-transform">
+                    M
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-extrabold text-slate-900 text-sm tracking-tight leading-none">Misbahul Anam</span>
+                    <span class="text-[10px] text-slate-500 font-medium">Portofolio</span>
+                </div>
+            </a>
+
+            <!-- Navigasi Desktop (Tampil pada layar md ke atas) -->
+            <nav class="hidden md:flex items-center gap-1 bg-slate-100/70 p-1.5 rounded-full border border-slate-200/60">
+                <a href="index.html" class="px-4 py-2 text-xs font-semibold text-slate-700 hover:text-crimson-600 rounded-full hover:bg-white transition">Beranda</a>
+                <a href="skill.html" class="px-4 py-2 text-xs font-semibold text-slate-700 hover:text-crimson-600 rounded-full hover:bg-white transition">Skill</a>
+                <a href="aktivitas.html" class="px-4 py-2 text-xs font-semibold text-slate-700 hover:text-crimson-600 rounded-full hover:bg-white transition">Aktivitas</a>
+                <a href="sertifikat.html" class="px-4 py-2 text-xs font-semibold text-slate-700 hover:text-crimson-600 rounded-full hover:bg-white transition">Sertifikat</a>
+                <a href="project.html" class="px-4 py-2 text-xs font-semibold text-crimson-700 bg-white rounded-full shadow-sm">Project</a>
+                <a href="kontak.html" class="px-4 py-2 text-xs font-semibold text-slate-700 hover:text-crimson-600 rounded-full hover:bg-white transition">Kontak</a>
+            </nav>
+
+            <!-- Tombol Action & Mobile Menu Toggle -->
+            <div class="flex items-center gap-3">
+                <a href="//project" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-full bg-crimson-600 hover:bg-crimson-700 text-white text-xs font-semibold shadow-md hover:shadow-lg transition">
+                    <i class="fa-solid fa-eye text-[10px]"></i> Lihat Proyek Saya
+                </a>
+
+                <!-- Hamburger Button (Tampil hanya pada Mobile / layar kecil) -->
+                <button id="mobile-menu-btn" class="md:hidden w-10 h-10 rounded-xl bg-slate-100 border border-slate-200 text-slate-700 flex items-center justify-center hover:bg-rose-50 hover:text-crimson-600 transition" aria-label="Toggle Menu">
+                    <i id="menu-icon" class="fa-solid fa-bars text-lg"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Menu Mobile Overlay (Tampil ketika Hamburger di-klik) -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200/60 bg-white/95 backdrop-blur-lg px-6 py-4 space-y-2 shadow-xl">
+            <a href="#beranda" class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-rose-50 hover:text-crimson-600 transition">Beranda</a>
+            <a href="skill.html" class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-rose-50 hover:text-crimson-600 transition">Skill</a>
+            <a href="aktivitas.html" class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-rose-50 hover:text-crimson-600 transition">Aktivitas</a>
+            <a href="sertifikat.html" class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-rose-50 hover:text-crimson-600 transition">Sertifikat</a>
+            <a href="project.html" class="block px-4 py-2.5 rounded-xl text-sm font-bold text-crimson-600 bg-rose-50 border border-rose-100 transition">Project</a>
+            <a href="kontak.html" class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-rose-50 hover:text-crimson-600 transition">Kontak</a>
+            <div class="pt-2">
+                <a href="project.html" class="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-crimson-600 text-white text-xs font-bold shadow-md">
+                    <i class="fa-solid fa-eye text-[10px]"></i> Lihat Proyek Saya
+                </a>
+            </div>
+        </div>
+    </header>
+
     <!-- KONTEN UTAMA PROJECT -->
-    <main class="max-w-6xl w-full mx-auto relative z-10 space-y-10">
+    <main id="project" class="max-w-6xl w-full mx-auto relative z-10 space-y-10">
         
         <!-- Header Section -->
         <div class="text-center space-y-3">
@@ -80,7 +139,6 @@
             <!-- PROJECT 1: E-Commerce UMKM Laundry -->
             <div class="glass-card rounded-3xl p-6 glow-bright border border-rose-100 flex flex-col justify-between space-y-4 hover:-translate-y-1 transition duration-300">
                 <div class="space-y-4">
-                    <!-- Banner Mockup Gambar -->
                     <div class="w-full h-44 bg-rose-50/60 rounded-2xl overflow-hidden border border-rose-100 relative group flex items-center justify-center">
                         <div class="text-center p-4">
                             <i class="fa-solid fa-shirt text-crimson-500 text-3xl mb-2"></i>
@@ -100,7 +158,6 @@
                     </p>
                 </div>
 
-                <!-- Skill Tags Red Badge -->
                 <div class="pt-2">
                     <div class="bg-rose-50 border border-rose-100/80 rounded-xl px-3 py-2 flex items-center gap-2 text-[11px] font-bold text-crimson-600">
                         <i class="fa-solid fa-code text-[10px]"></i>
@@ -112,11 +169,10 @@
             <!-- PROJECT 2: Aplikasi Mobile KIP Kuliah Tracker -->
             <div class="glass-card rounded-3xl p-6 glow-bright border border-rose-100 flex flex-col justify-between space-y-4 hover:-translate-y-1 transition duration-300">
                 <div class="space-y-4">
-                    <!-- Banner Mockup Gambar -->
                     <div class="w-full h-44 bg-blue-50/60 rounded-2xl overflow-hidden border border-slate-200/60 relative group flex items-center justify-center">
                         <div class="text-center p-4">
                             <i class="fa-solid fa-graduation-cap text-blue-600 text-3xl mb-2"></i>
-                            <span class="block text-xs font-bold text-slate-700">Akun Mobile KIP-K</span>
+                            <span class="block text-xs font-bold text-slate-700">Aplikasi Mobile KIP-K</span>
                         </div>
                         <span class="absolute top-3 right-3 bg-rose-100 text-crimson-700 border border-rose-200 text-[10px] font-bold px-2.5 py-1 rounded-full shadow-sm">
                             Aplikasi MOBILE
@@ -132,7 +188,6 @@
                     </p>
                 </div>
 
-                <!-- Skill Tags Red Badge -->
                 <div class="pt-2">
                     <div class="bg-rose-50 border border-rose-100/80 rounded-xl px-3 py-2 flex items-center gap-2 text-[11px] font-bold text-crimson-600">
                         <i class="fa-solid fa-code text-[10px]"></i>
@@ -144,7 +199,6 @@
             <!-- PROJECT 3: Landing Page KAI Commuter -->
             <div class="glass-card rounded-3xl p-6 glow-bright border border-rose-100 flex flex-col justify-between space-y-4 hover:-translate-y-1 transition duration-300">
                 <div class="space-y-4">
-                    <!-- Banner Mockup Gambar -->
                     <div class="w-full h-44 bg-slate-100/80 rounded-2xl overflow-hidden border border-slate-200 relative group flex items-center justify-center">
                         <div class="text-center p-4">
                             <i class="fa-solid fa-train text-slate-700 text-3xl mb-2"></i>
@@ -164,7 +218,6 @@
                     </p>
                 </div>
 
-                <!-- Skill Tags Red Badge -->
                 <div class="pt-2">
                     <div class="bg-rose-50 border border-rose-100/80 rounded-xl px-3 py-2 flex items-center gap-2 text-[11px] font-bold text-crimson-600">
                         <i class="fa-solid fa-code text-[10px]"></i>
@@ -176,7 +229,6 @@
             <!-- PROJECT 4: Landing page Elearning STT NF -->
             <div class="glass-card rounded-3xl p-6 glow-bright border border-rose-100 flex flex-col justify-between space-y-4 hover:-translate-y-1 transition duration-300">
                 <div class="space-y-4">
-                    <!-- Banner Mockup Gambar -->
                     <div class="w-full h-44 bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 relative group flex items-center justify-center">
                         <div class="text-center p-4 text-white">
                             <i class="fa-solid fa-book-open-reader text-amber-400 text-3xl mb-2"></i>
@@ -196,7 +248,6 @@
                     </p>
                 </div>
 
-                <!-- Skill Tags Red Badge -->
                 <div class="pt-2">
                     <div class="bg-rose-50 border border-rose-100/80 rounded-xl px-3 py-2 flex items-center gap-2 text-[11px] font-bold text-crimson-600">
                         <i class="fa-solid fa-code text-[10px]"></i>
@@ -209,5 +260,22 @@
 
     </main>
 
+    <!-- Script Toggling Mobile Menu -->
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const icon = document.getElementById('menu-icon');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            if (menu.classList.contains('hidden')) {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            }
+        });
+    </script>
 </body>
 </html>
