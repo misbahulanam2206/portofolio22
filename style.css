@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,600&display=swap');
+
+/* ==========================================================================
+   1. CUSTOM GLASSMORPHISM & GLOWING CARDS
+   ========================================================================== */
+.glass-card {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(225, 29, 72, 0.12);
+}
+
+.glass-nav {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(225, 29, 72, 0.1);
+}
+
+.glow-bright {
+    box-shadow: 0 20px 40px -15px rgba(225, 29, 72, 0.12);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.glow-bright:hover {
+    box-shadow: 0 25px 50px -12px rgba(225, 29, 72, 0.2);
+}
+
+/* ==========================================================================
+   2. YEAR BADGE & TIMELINE CUSTOM EFFECTS
+   ========================================================================== */
+.year-badge-glow {
+    background: linear-gradient(135deg, #ffffff 0%, #fff1f2 100%);
+    box-shadow: 0 4px 15px -2px rgba(225, 29, 72, 0.2), 0 0 10px rgba(225, 29, 72, 0.1);
+}
+
+/* ==========================================================================
+   3. CUSTOM SCROLLBAR & SELECTION
+   ========================================================================== */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f8fafc;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #fda4af;
+    border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #e11d48;
+}
+
+::selection {
+    background-color: #f43f5e;
+    color: #ffffff;
+}
