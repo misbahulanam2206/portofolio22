@@ -20,17 +20,17 @@
             theme: {
                 extend: {
                     colors: {
-                        crimson: {
-                            50: '#fff1f2',
-                            100: '#ffe4e6',
-                            200: '#fecdd3',
-                            300: '#fda4af',
-                            400: '#fb7185',
-                            500: '#f43f5e',
-                            600: '#e11d48',
-                            700: '#be123c',
-                            800: '#9f1239',
-                            900: '#881337',
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            200: '#bfdbfe',
+                            300: '#93c5fd',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
                         }
                     },
                     fontFamily: {
@@ -46,29 +46,29 @@
         .glass-card {
             background: rgba(255, 255, 255, 0.85);
             backdrop-filter: blur(16px);
-            border: 1px solid rgba(225, 29, 72, 0.12);
+            border: 1px solid rgba(37, 99, 235, 0.12);
         }
         .glass-nav {
             background: rgba(255, 255, 255, 0.85);
             backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(225, 29, 72, 0.1);
+            border-bottom: 1px solid rgba(37, 99, 235, 0.1);
         }
         .glow-bright {
-            box-shadow: 0 20px 40px -15px rgba(225, 29, 72, 0.12);
+            box-shadow: 0 20px 40px -15px rgba(37, 99, 235, 0.12);
         }
-        /* Style Badge Tahun Fresh Glowing Effect */
+        /* Style Badge Tahun Glowing Effect (Biru-Orange) */
         .year-badge-glow {
-            background: linear-gradient(135deg, #ffffff 0%, #fff1f2 100%);
-            box-shadow: 0 4px 15px -2px rgba(225, 29, 72, 0.2), 0 0 10px rgba(225, 29, 72, 0.1);
+            background: linear-gradient(135deg, #ffffff 0%, #eff6ff 100%);
+            box-shadow: 0 4px 15px -2px rgba(37, 99, 235, 0.2), 0 0 10px rgba(249, 115, 22, 0.15);
         }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased selection:bg-crimson-500 selection:text-white min-h-screen pt-28 pb-16 px-6 relative overflow-x-hidden flex flex-col justify-between items-center">
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-500 selection:text-white min-h-screen pt-28 pb-16 px-6 relative overflow-x-hidden flex flex-col justify-between items-center">
 
-    <!-- Ambient Background Glow -->
-    <div class="fixed -top-40 -left-40 w-[600px] h-[600px] bg-rose-200/50 rounded-full blur-[140px] pointer-events-none z-0"></div>
-    <div class="fixed top-1/3 -right-40 w-[500px] h-[500px] bg-crimson-100/60 rounded-full blur-[140px] pointer-events-none z-0"></div>
-    <div class="fixed -bottom-40 left-1/3 w-[550px] h-[550px] bg-amber-100/50 rounded-full blur-[150px] pointer-events-none z-0"></div>
+    <!-- Ambient Background Glow (Biru & Orange) -->
+    <div class="fixed -top-40 -left-40 w-[600px] h-[600px] bg-sky-200/50 rounded-full blur-[140px] pointer-events-none z-0"></div>
+    <div class="fixed top-1/3 -right-40 w-[500px] h-[500px] bg-blue-100/60 rounded-full blur-[140px] pointer-events-none z-0"></div>
+    <div class="fixed -bottom-40 left-1/3 w-[550px] h-[550px] bg-amber-200/50 rounded-full blur-[150px] pointer-events-none z-0"></div>
 
     <!-- NAVBAR RESPONSIF -->
     <header class="fixed top-0 left-0 right-0 z-50 glass-nav">
@@ -76,7 +76,7 @@
             
             <!-- Logo / Branding -->
             <a href="index.html" class="flex items-center gap-2 group">
-                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-crimson-600 to-rose-500 text-white flex items-center justify-center font-black text-lg shadow-md group-hover:scale-105 transition-transform">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-orange-500 text-white flex items-center justify-center font-black text-lg shadow-md group-hover:scale-105 transition-transform">
                     M
                 </div>
                 <div class="flex flex-col">
@@ -87,22 +87,22 @@
 
             <!-- Navigasi Desktop -->
             <nav class="hidden md:flex items-center gap-1 bg-slate-100/70 p-1.5 rounded-full border border-slate-200/60">
-                <a href="about.html" class="px-4 py-2 text-xs font-semibold text-slate-700 hover:text-crimson-600 rounded-full hover:bg-white transition">Beranda</a>
-                <a href="skill.html" class="px-4 py-2 text-xs font-semibold text-slate-700 hover:text-crimson-600 rounded-full hover:bg-white transition">Skill</a>
-                <a href="aktivitas.html" class="px-4 py-2 text-xs font-semibold text-crimson-700 bg-white rounded-full shadow-sm">Aktivitas</a>
-                <a href="sertifikat.html" class="px-4 py-2 text-xs font-semibold text-slate-700 hover:text-crimson-600 rounded-full hover:bg-white transition">Sertifikat</a>
-                <a href="project.html" class="px-4 py-2 text-xs font-semibold text-slate-700 hover:text-crimson-600 rounded-full hover:bg-white transition">Project</a>
-                <a href="kontak.html" class="px-4 py-2 text-xs font-semibold text-slate-700 hover:text-crimson-600 rounded-full hover:bg-white transition">Kontak</a>
+                <a href="about.html" class="px-4 py-2 text-xs font-semibold text-slate-700 hover:text-brand-600 rounded-full hover:bg-white transition">Beranda</a>
+                <a href="skill.html" class="px-4 py-2 text-xs font-semibold text-slate-700 hover:text-brand-600 rounded-full hover:bg-white transition">Skill</a>
+                <a href="aktivitas.html" class="px-4 py-2 text-xs font-semibold text-brand-700 bg-white rounded-full shadow-sm">Aktivitas</a>
+                <a href="sertifikat.html" class="px-4 py-2 text-xs font-semibold text-slate-700 hover:text-brand-600 rounded-full hover:bg-white transition">Sertifikat</a>
+                <a href="project.html" class="px-4 py-2 text-xs font-semibold text-slate-700 hover:text-brand-600 rounded-full hover:bg-white transition">Project</a>
+                <a href="kontak.html" class="px-4 py-2 text-xs font-semibold text-slate-700 hover:text-brand-600 rounded-full hover:bg-white transition">Kontak</a>
             </nav>
 
             <!-- Tombol Action & Mobile Menu Toggle -->
             <div class="flex items-center gap-3">
-                <a href="mailto:misbahulanamsidiq5@gmail.com" class="text-xs font-semibold bg-crimson-600 hover:bg-crimson-700 text-white px-5 py-2.5 rounded-full transition shadow-lg shadow-crimson-600/20 flex items-center gap-2">
+                <a href="mailto:misbahulanamsidiq5@gmail.com" class="text-xs font-semibold bg-brand-600 hover:bg-brand-700 text-white px-5 py-2.5 rounded-full transition shadow-lg shadow-brand-600/20 flex items-center gap-2">
                     <i class="fa-solid fa-envelope text-xs"></i>
                     <span>Hubungi Saya</span>
                 </a>
 
-                <button id="mobile-menu-btn" class="md:hidden w-10 h-10 rounded-xl bg-slate-100 border border-slate-200 text-slate-700 flex items-center justify-center hover:bg-rose-50 hover:text-crimson-600 transition" aria-label="Toggle Menu">
+                <button id="mobile-menu-btn" class="md:hidden w-10 h-10 rounded-xl bg-slate-100 border border-slate-200 text-slate-700 flex items-center justify-center hover:bg-blue-50 hover:text-brand-600 transition" aria-label="Toggle Menu">
                     <i id="menu-icon" class="fa-solid fa-bars text-lg"></i>
                 </button>
             </div>
@@ -110,12 +110,12 @@
 
         <!-- Menu Mobile Overlay -->
         <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200/60 bg-white/95 backdrop-blur-lg px-6 py-4 space-y-2 shadow-xl">
-            <a href="about.html" class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-rose-50 hover:text-crimson-600 transition">Beranda</a>
-            <a href="skill.html" class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-rose-50 hover:text-crimson-600 transition">Skill</a>
-            <a href="aktivitas.html" class="block px-4 py-2.5 rounded-xl text-sm font-bold text-crimson-600 bg-rose-50 border border-rose-100 transition">Aktivitas</a>
-            <a href="sertifikat.html" class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-rose-50 hover:text-crimson-600 transition">Sertifikat</a>
-            <a href="project.html" class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-rose-50 hover:text-crimson-600 transition">Project</a>
-            <a href="kontak.html" class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-rose-50 hover:text-crimson-600 transition">Kontak</a>
+            <a href="about.html" class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-blue-50 hover:text-brand-600 transition">Beranda</a>
+            <a href="skill.html" class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-blue-50 hover:text-brand-600 transition">Skill</a>
+            <a href="aktivitas.html" class="block px-4 py-2.5 rounded-xl text-sm font-bold text-brand-600 bg-blue-50 border border-blue-100 transition">Aktivitas</a>
+            <a href="sertifikat.html" class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-blue-50 hover:text-brand-600 transition">Sertifikat</a>
+            <a href="project.html" class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-blue-50 hover:text-brand-600 transition">Project</a>
+            <a href="kontak.html" class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-blue-50 hover:text-brand-600 transition">Kontak</a>
         </div>
     </header>
 
@@ -124,11 +124,11 @@
         
         <!-- Header Section -->
         <div class="text-center space-y-3">
-            <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-rose-100/80 border border-rose-200 text-crimson-700 text-xs font-semibold tracking-wide uppercase shadow-sm">
-                <i class="fa-solid fa-clock-rotate-left text-crimson-600"></i> Timeline & Experience
+            <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-100/80 border border-orange-200 text-orange-700 text-xs font-semibold tracking-wide uppercase shadow-sm">
+                <i class="fa-solid fa-clock-rotate-left text-orange-600"></i> Timeline & Experience
             </span>
             <h1 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
-                Aktivitas & <span class="bg-gradient-to-r from-crimson-600 to-rose-500 bg-clip-text text-transparent">Rekam Jejak Akademik</span>
+                Aktivitas & <span class="bg-gradient-to-r from-brand-600 via-blue-600 to-orange-500 bg-clip-text text-transparent">Rekam Jejak Akademik</span>
             </h1>
             <p class="text-slate-500 text-sm max-w-md mx-auto">
                 Pengalaman proyek perkuliahan, riset keahlian web development, jaringan, serta kegiatan pengembangan diri.
@@ -136,25 +136,25 @@
         </div>
 
         <!-- Timeline Container -->
-        <div class="relative border-l-2 border-rose-200 ml-4 md:ml-36 space-y-10">
+        <div class="relative border-l-2 border-blue-200 ml-4 md:ml-36 space-y-10">
 
-            <!-- Item Timeline 1: Dicoding Coding Camp 2026 -->
+            <!-- Item Timeline 1: Magang MBKM 2026 -->
             <div class="relative pl-8 group">
                 <!-- Glowing Dot Marker -->
-                <div class="absolute -left-[10px] top-2 w-5 h-5 rounded-full bg-gradient-to-tr from-crimson-600 to-rose-400 border-4 border-white shadow-lg shadow-crimson-600/40 group-hover:scale-125 transition-transform duration-300"></div>
+                <div class="absolute -left-[10px] top-2 w-5 h-5 rounded-full bg-gradient-to-tr from-brand-600 to-orange-500 border-4 border-white shadow-lg shadow-brand-600/40 group-hover:scale-125 transition-transform duration-300"></div>
                 
                 <!-- Fresh Glowing Badge 2026 (Desktop) -->
-                <div class="hidden md:flex absolute -left-40 top-1 items-center justify-center gap-1.5 text-xs font-black text-crimson-700 year-badge-glow px-4 py-1.5 rounded-full border border-rose-200/80 group-hover:scale-105 transition-transform duration-300 w-32">
-                    <span class="w-1.5 h-1.5 rounded-full bg-crimson-600 animate-pulse"></span>
+                <div class="hidden md:flex absolute -left-40 top-1 items-center justify-center gap-1.5 text-xs font-black text-brand-700 year-badge-glow px-4 py-1.5 rounded-full border border-blue-200/80 group-hover:scale-105 transition-transform duration-300 w-32">
+                    <span class="w-1.5 h-1.5 rounded-full bg-orange-500 animate-pulse"></span>
                     <span>2026</span>
                 </div>
 
-                <div class="glass-card rounded-2xl p-6 glow-bright border border-rose-100 space-y-3">
+                <div class="glass-card rounded-2xl p-6 glow-bright border border-blue-100 space-y-3">
                     <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-100 pb-3">
                         <div>
                             <!-- Fresh Badge Mobile -->
-                            <span class="md:hidden inline-flex items-center gap-1 text-[10px] font-black text-crimson-700 bg-rose-100/80 px-3 py-1 rounded-full border border-rose-200 mb-1.5">
-                                <span class="w-1.5 h-1.5 rounded-full bg-crimson-600 animate-pulse"></span> 2026
+                            <span class="md:hidden inline-flex items-center gap-1 text-[10px] font-black text-brand-700 bg-blue-100/80 px-3 py-1 rounded-full border border-blue-200 mb-1.5">
+                                <span class="w-1.5 h-1.5 rounded-full bg-orange-500 animate-pulse"></span> 2026
                             </span>
                             <h2 class="text-base font-bold text-slate-900">Magang MBKM 2026</h2>
                         </div>
@@ -170,90 +170,90 @@
                 </div>
             </div>
 
-            <!-- Item Timeline 2: Backend Developer - KIP-K Tracker -->
+            <!-- Item Timeline 2: Frontend Developer - KIP-K Tracker -->
             <div class="relative pl-8 group">
                 <!-- Glowing Dot Marker -->
-                <div class="absolute -left-[10px] top-2 w-5 h-5 rounded-full bg-gradient-to-tr from-crimson-600 to-rose-400 border-4 border-white shadow-lg shadow-crimson-600/40 group-hover:scale-125 transition-transform duration-300"></div>
+                <div class="absolute -left-[10px] top-2 w-5 h-5 rounded-full bg-gradient-to-tr from-brand-600 to-orange-500 border-4 border-white shadow-lg shadow-brand-600/40 group-hover:scale-125 transition-transform duration-300"></div>
                 
                 <!-- Fresh Glowing Badge 2026 Sem 4 (Desktop) -->
-                <div class="hidden md:flex absolute -left-40 top-1 items-center justify-center gap-1.5 text-xs font-black text-crimson-700 year-badge-glow px-4 py-1.5 rounded-full border border-rose-200/80 group-hover:scale-105 transition-transform duration-300 w-32">
-                    <span class="w-1.5 h-1.5 rounded-full bg-crimson-600 animate-pulse"></span>
+                <div class="hidden md:flex absolute -left-40 top-1 items-center justify-center gap-1.5 text-xs font-black text-brand-700 year-badge-glow px-4 py-1.5 rounded-full border border-blue-200/80 group-hover:scale-105 transition-transform duration-300 w-32">
+                    <span class="w-1.5 h-1.5 rounded-full bg-orange-500 animate-pulse"></span>
                     <span>2026 (Sem 4)</span>
                 </div>
 
-                <div class="glass-card rounded-2xl p-6 glow-bright border border-rose-100 space-y-3">
+                <div class="glass-card rounded-2xl p-6 glow-bright border border-blue-100 space-y-3">
                     <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-100 pb-3">
                         <div>
                             <!-- Fresh Badge Mobile -->
-                            <span class="md:hidden inline-flex items-center gap-1 text-[10px] font-black text-crimson-700 bg-rose-100/80 px-3 py-1 rounded-full border border-rose-200 mb-1.5">
-                                <span class="w-1.5 h-1.5 rounded-full bg-crimson-600 animate-pulse"></span> 2026 (Semester 4)
+                            <span class="md:hidden inline-flex items-center gap-1 text-[10px] font-black text-brand-700 bg-blue-100/80 px-3 py-1 rounded-full border border-blue-200 mb-1.5">
+                                <span class="w-1.5 h-1.5 rounded-full bg-orange-500 animate-pulse"></span> 2026 (Semester 4)
                             </span>
                             <h2 class="text-base font-bold text-slate-900">Frontend Developer - Proyek KIP-K Tracker</h2>
                         </div>
                         <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2.5 py-1 rounded-md">STT Terpadu Nurul Fikri</span>
                     </div>
                     <p class="text-xs text-slate-600 leading-relaxed">
-                        Bertindak sebagai frontend Developer dalam tim kelompok 5 orang. Merancang RESTful API menggunakan React.js, Express.js, dan membuat tampilan aplikasi Kip KUliah tracker lebih mudah responsif, mudah di gunakan oleh mahasiswa dan serta memantau monitoring pencairan dana kip kuliah.
+                        Bertindak sebagai frontend Developer dalam tim kelompok 5 orang. Merancang RESTful API menggunakan React.js, Express.js, dan membuat tampilan aplikasi KIP Kuliah tracker lebih responsif, mudah digunakan oleh mahasiswa, serta memantau monitoring pencairan dana KIP Kuliah.
                     </p>
                     <div class="flex flex-wrap gap-1.5 pt-1">
-                        <span class="px-2.5 py-1 bg-white border border-slate-200 text-slate-700 text-[10px] font-semibold rounded-md">Reactjs</span>
+                        <span class="px-2.5 py-1 bg-white border border-slate-200 text-slate-700 text-[10px] font-semibold rounded-md">React.js</span>
                         <span class="px-2.5 py-1 bg-white border border-slate-200 text-slate-700 text-[10px] font-semibold rounded-md">Express.js</span>
                         <span class="px-2.5 py-1 bg-white border border-slate-200 text-slate-700 text-[10px] font-semibold rounded-md">MySQL</span>
-                        <span class="px-2.5 py-1 bg-white border border-slate-200 text-slate-700 text-[10px] font-semibold rounded-md">GitHub,Sprint</span>
+                        <span class="px-2.5 py-1 bg-white border border-slate-200 text-slate-700 text-[10px] font-semibold rounded-md">GitHub</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Item Timeline 3: Redesain UI Aplikasi KAI Commuter -->
+            <!-- Item Timeline 3: Perancangan Aplikasi Mobile KAI Commuter -->
             <div class="relative pl-8 group">
                 <!-- Glowing Dot Marker -->
-                <div class="absolute -left-[10px] top-2 w-5 h-5 rounded-full bg-gradient-to-tr from-crimson-600 to-rose-400 border-4 border-white shadow-lg shadow-crimson-600/40 group-hover:scale-125 transition-transform duration-300"></div>
+                <div class="absolute -left-[10px] top-2 w-5 h-5 rounded-full bg-gradient-to-tr from-brand-600 to-orange-500 border-4 border-white shadow-lg shadow-brand-600/40 group-hover:scale-125 transition-transform duration-300"></div>
                 
                 <!-- Fresh Glowing Badge 2026 (Desktop) -->
-                <div class="hidden md:flex absolute -left-40 top-1 items-center justify-center gap-1.5 text-xs font-black text-crimson-700 year-badge-glow px-4 py-1.5 rounded-full border border-rose-200/80 group-hover:scale-105 transition-transform duration-300 w-32">
-                    <span class="w-1.5 h-1.5 rounded-full bg-crimson-600 animate-pulse"></span>
+                <div class="hidden md:flex absolute -left-40 top-1 items-center justify-center gap-1.5 text-xs font-black text-brand-700 year-badge-glow px-4 py-1.5 rounded-full border border-blue-200/80 group-hover:scale-105 transition-transform duration-300 w-32">
+                    <span class="w-1.5 h-1.5 rounded-full bg-orange-500 animate-pulse"></span>
                     <span>2026</span>
                 </div>
 
-                <div class="glass-card rounded-2xl p-6 glow-bright border border-rose-100 space-y-3">
+                <div class="glass-card rounded-2xl p-6 glow-bright border border-blue-100 space-y-3">
                     <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-100 pb-3">
                         <div>
                             <!-- Fresh Badge Mobile -->
-                            <span class="md:hidden inline-flex items-center gap-1 text-[10px] font-black text-crimson-700 bg-rose-100/80 px-3 py-1 rounded-full border border-rose-200 mb-1.5">
-                                <span class="w-1.5 h-1.5 rounded-full bg-crimson-600 animate-pulse"></span> 2026
+                            <span class="md:hidden inline-flex items-center gap-1 text-[10px] font-black text-brand-700 bg-blue-100/80 px-3 py-1 rounded-full border border-blue-200 mb-1.5">
+                                <span class="w-1.5 h-1.5 rounded-full bg-orange-500 animate-pulse"></span> 2026
                             </span>
-                            <h2 class="text-base font-bold text-slate-900">Perancangan Aplikasi mobile KAI Commuter</h2>
+                            <h2 class="text-base font-bold text-slate-900">Perancangan Aplikasi Mobile KAI Commuter</h2>
                         </div>
-                        <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2.5 py-1 rounded-md">Studi Kasus </span>
+                        <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2.5 py-1 rounded-md">Studi Kasus</span>
                     </div>
                     <p class="text-xs text-slate-600 leading-relaxed">
-                        Mengembangkan konsep tatak letak dan menyesuaikan apa yang di input oleh pengguna( penumpang ), dan memberikan kesan aplikasi layanan C-access ini bisa di gunakan nyata dan bisa membantu penumpang dalam melalukan transaksi dengan mudah dengan layanan kai commuter ini. 
+                        Mengembangkan konsep tata letak dan menyesuaikan kebutuhan pengguna (penumpang), memberikan impresi bahwa aplikasi layanan C-access ini siap digunakan secara nyata untuk membantu penumpang bertransaksi dengan mudah.
                     </p>
                     <div class="flex flex-wrap gap-1.5 pt-1">
                         <span class="px-2.5 py-1 bg-white border border-slate-200 text-slate-700 text-[10px] font-semibold rounded-md">Figma</span>
                         <span class="px-2.5 py-1 bg-white border border-slate-200 text-slate-700 text-[10px] font-semibold rounded-md">HTML</span>
-                        <span class="px-2.5 py-1 bg-white border border-slate-200 text-slate-700 text-[10px] font-semibold rounded-md">User </span>
-                        <span class= "px-2.5 py-1 bg-white border border-slate-230 text-slate-600 text-[12px] font-semibold rounded-md">CSS</span>
+                        <span class="px-2.5 py-1 bg-white border border-slate-200 text-slate-700 text-[10px] font-semibold rounded-md">User Experience</span>
+                        <span class="px-2.5 py-1 bg-white border border-slate-200 text-slate-700 text-[10px] font-semibold rounded-md">CSS</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Item Timeline 4: Seminar Cybersecurity & Digital Forensics -->
+            <!-- Item Timeline 4: Studi Keamanan Siber & Kriptografi -->
             <div class="relative pl-8 group">
                 <!-- Glowing Dot Marker -->
-                <div class="absolute -left-[10px] top-2 w-5 h-5 rounded-full bg-gradient-to-tr from-crimson-600 to-rose-400 border-4 border-white shadow-lg shadow-crimson-600/40 group-hover:scale-125 transition-transform duration-300"></div>
+                <div class="absolute -left-[10px] top-2 w-5 h-5 rounded-full bg-gradient-to-tr from-brand-600 to-orange-500 border-4 border-white shadow-lg shadow-brand-600/40 group-hover:scale-125 transition-transform duration-300"></div>
                 
                 <!-- Fresh Glowing Badge 2025 - 2026 (Desktop) -->
-                <div class="hidden md:flex absolute -left-40 top-1 items-center justify-center gap-1.5 text-xs font-black text-crimson-700 year-badge-glow px-4 py-1.5 rounded-full border border-rose-200/80 group-hover:scale-105 transition-transform duration-300 w-32">
-                    <span class="w-1.5 h-1.5 rounded-full bg-crimson-600"></span>
+                <div class="hidden md:flex absolute -left-40 top-1 items-center justify-center gap-1.5 text-xs font-black text-brand-700 year-badge-glow px-4 py-1.5 rounded-full border border-blue-200/80 group-hover:scale-105 transition-transform duration-300 w-32">
+                    <span class="w-1.5 h-1.5 rounded-full bg-brand-600"></span>
                     <span>2025 - 2026</span>
                 </div>
 
-                <div class="glass-card rounded-2xl p-6 glow-bright border border-rose-100 space-y-3">
+                <div class="glass-card rounded-2xl p-6 glow-bright border border-blue-100 space-y-3">
                     <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-100 pb-3">
                         <div>
                             <!-- Fresh Badge Mobile -->
-                            <span class="md:hidden inline-flex items-center gap-1 text-[10px] font-black text-crimson-700 bg-rose-100/80 px-3 py-1 rounded-full border border-rose-200 mb-1.5">
+                            <span class="md:hidden inline-flex items-center gap-1 text-[10px] font-black text-brand-700 bg-blue-100/80 px-3 py-1 rounded-full border border-blue-200 mb-1.5">
                                 2025 - 2026
                             </span>
                             <h2 class="text-base font-bold text-slate-900">Studi Keamanan Siber & Kriptografi</h2>
@@ -261,7 +261,7 @@
                         <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2.5 py-1 rounded-md">Kuliah</span>
                     </div>
                     <p class="text-xs text-slate-600 leading-relaxed">
-                        Mempelajari konsep *CIA Triad*, pengujian penetrasi WAF, analisis insiden data leak, krisptografi klasik (Caesar Cipher, ROT13), serta eksperimen keamanan di platform TryHackMe.
+                        Mempelajari konsep *CIA Triad*, pengujian penetrasi WAF, analisis insiden data leak, kriptografi klasik (Caesar Cipher, ROT13), serta eksperimen keamanan di platform TryHackMe.
                     </p>
                     <div class="flex flex-wrap gap-1.5 pt-1">
                         <span class="px-2.5 py-1 bg-white border border-slate-200 text-slate-700 text-[10px] font-semibold rounded-md">Cybersecurity</span>
@@ -274,19 +274,19 @@
             <!-- Item Timeline 5: Pendidikan SMK YPPD TKJ -->
             <div class="relative pl-8 group">
                 <!-- Glowing Dot Marker -->
-                <div class="absolute -left-[10px] top-2 w-5 h-5 rounded-full bg-gradient-to-tr from-crimson-600 to-rose-400 border-4 border-white shadow-lg shadow-crimson-600/40 group-hover:scale-125 transition-transform duration-300"></div>
+                <div class="absolute -left-[10px] top-2 w-5 h-5 rounded-full bg-gradient-to-tr from-brand-600 to-orange-500 border-4 border-white shadow-lg shadow-brand-600/40 group-hover:scale-125 transition-transform duration-300"></div>
                 
                 <!-- Fresh Glowing Badge Alumni (Desktop) -->
-                <div class="hidden md:flex absolute -left-40 top-1 items-center justify-center gap-1.5 text-xs font-black text-crimson-700 year-badge-glow px-4 py-1.5 rounded-full border border-rose-200/80 group-hover:scale-105 transition-transform duration-300 w-32">
+                <div class="hidden md:flex absolute -left-40 top-1 items-center justify-center gap-1.5 text-xs font-black text-brand-700 year-badge-glow px-4 py-1.5 rounded-full border border-blue-200/80 group-hover:scale-105 transition-transform duration-300 w-32">
                     <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
                     <span>Alumni</span>
                 </div>
 
-                <div class="glass-card rounded-2xl p-6 glow-bright border border-rose-100 space-y-3">
+                <div class="glass-card rounded-2xl p-6 glow-bright border border-blue-100 space-y-3">
                     <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-100 pb-3">
                         <div>
                             <!-- Fresh Badge Mobile -->
-                            <span class="md:hidden inline-flex items-center gap-1 text-[10px] font-black text-crimson-700 bg-rose-100/80 px-3 py-1 rounded-full border border-rose-200 mb-1.5">
+                            <span class="md:hidden inline-flex items-center gap-1 text-[10px] font-black text-brand-700 bg-blue-100/80 px-3 py-1 rounded-full border border-blue-200 mb-1.5">
                                 Alumni
                             </span>
                             <h2 class="text-base font-bold text-slate-900">SMK YPPD - Teknik Komputer & Jaringan</h2>
@@ -310,10 +310,10 @@
 
     <!-- FOOTER -->
     <footer class="w-full py-8 px-6 border-t border-slate-200/80 bg-white relative z-10 text-xs text-slate-500 mt-16">
-        <div class="flex items-center gap-2 text-xs font-medium text-slate-600">
-            <span class="w-2 h-2 rounded-full bg-crimson-600 animate-pulse"></span>
+        <div class="max-w-4xl mx-auto flex items-center justify-center gap-2 text-xs font-medium text-slate-600">
+            <span class="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
             <p>
-                &copy; 2026 <span class="bg-gradient-to-r from-crimson-600 to-rose-500 bg-clip-text text-transparent font-bold">Misbahul Anam Sidiq</span>. All rights reserved.
+                &copy; 2026 <span class="bg-gradient-to-r from-brand-600 to-orange-500 bg-clip-text text-transparent font-bold">Misbahul Anam Sidiq</span>. All rights reserved.
             </p>
         </div>
     </footer>
