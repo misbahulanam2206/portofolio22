@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Keahlian Utama | Misbahul Anam Sidiq</title>
     
-    <!-- Font Inter & Playfair -->
+    <!-- Font Inter & Montserrat -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
     
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -21,21 +21,17 @@
                 extend: {
                     colors: {
                         brand: {
-                            50: '#eff6ff',
-                            100: '#dbeafe',
-                            200: '#bfdbfe',
-                            300: '#93c5fd',
-                            400: '#60a5fa',
-                            500: '#3b82f6',
-                            600: '#2563eb',
-                            700: '#1d4ed8',
-                            800: '#1e40af',
-                            900: '#1e3a8a',
+                            blue: '#1e40af',      /* Electric Deep Blue */
+                            blueLight: '#3b82f6',
+                            orange: '#f97316',    /* Vibrant Orange */
+                            orangeDark: '#ea580c',
+                            red: '#ef4444',       /* Energetic Crimson Red */
+                            redDark: '#dc2626'
                         }
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif']
+                        heading: ['Montserrat', 'sans-serif']
                     }
                 }
             }
@@ -43,288 +39,417 @@
     </script>
 
     <style>
-        .glass-card {
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(16px);
-            border: 1px solid rgba(37, 99, 235, 0.12);
+        .glass-card-3d {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(226, 232, 240, 0.9);
+            box-shadow: 0 20px 40px -15px rgba(30, 64, 175, 0.06), 0 10px 20px -10px rgba(249, 115, 22, 0.04);
         }
         .glass-nav {
             background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(37, 99, 235, 0.1);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.8);
         }
-        .glow-bright {
-            box-shadow: 0 20px 40px -15px rgba(37, 99, 235, 0.12);
+        .text-gradient {
+            background: linear-gradient(135deg, #1e40af 0%, #ea580c 50%, #dc2626 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .skill-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .skill-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 25px 50px -12px rgba(30, 64, 175, 0.12);
+        }
+        /* Custom Progress Bar Glow */
+        .progress-glow-blue {
+            box-shadow: 0 0 12px rgba(30, 64, 175, 0.4);
+        }
+        .progress-glow-orange {
+            box-shadow: 0 0 12px rgba(249, 115, 22, 0.4);
+        }
+        .progress-glow-red {
+            box-shadow: 0 0 12px rgba(239, 68, 68, 0.4);
         }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-500 selection:text-white min-h-screen pt-28 pb-16 px-6 relative overflow-x-hidden flex flex-col justify-between items-center">
+<body class="bg-slate-100/70 text-slate-800 antialiased selection:bg-brand-orange selection:text-white min-h-screen relative overflow-x-hidden flex flex-col justify-between">
 
-    <!-- Ambient Background Glow (Biru & Orange Accent) -->
-    <div class="fixed -top-40 -left-40 w-[600px] h-[600px] bg-sky-200/50 rounded-full blur-[140px] pointer-events-none z-0"></div>
-    <div class="fixed top-1/3 -right-40 w-[500px] h-[500px] bg-blue-100/60 rounded-full blur-[140px] pointer-events-none z-0"></div>
-    <div class="fixed -bottom-40 left-1/3 w-[550px] h-[550px] bg-amber-200/50 rounded-full blur-[150px] pointer-events-none z-0"></div>
+    <!-- Ambient Glow Background Multi-Warna -->
+    <div class="fixed -top-32 -left-32 w-[550px] h-[550px] bg-blue-500/15 rounded-full blur-[140px] pointer-events-none z-0"></div>
+    <div class="fixed top-1/2 -right-32 w-[500px] h-[500px] bg-orange-500/15 rounded-full blur-[140px] pointer-events-none z-0"></div>
+    <div class="fixed -bottom-32 left-1/3 w-[500px] h-[500px] bg-red-500/15 rounded-full blur-[150px] pointer-events-none z-0"></div>
 
-    <!-- NAVBAR RESPONSIF (DESKTOP & MOBILE) -->
+    <!-- NAVBAR RESPONSIF -->
     <header class="fixed top-0 left-0 right-0 z-50 glass-nav">
         <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
             
-            <!-- Logo / Branding -->
-            <a href="index.html" class="flex items-center gap-2 group">
-                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-orange-500 text-white flex items-center justify-center font-black text-lg shadow-md group-hover:scale-105 transition-transform">
+            <!-- Logo / Branding UI -->
+            <a href="about.html" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-blue via-brand-orange to-brand-red text-white flex items-center justify-center font-black text-lg shadow-md group-hover:scale-105 transition-transform">
                     M
                 </div>
                 <div class="flex flex-col">
-                    <span class="font-extrabold text-slate-900 text-sm tracking-tight leading-none">Misbahul Anam</span>
-                    <span class="text-[10px] text-slate-500 font-medium">Portofolio</span>
+                    <span class="font-heading font-extrabold text-slate-900 text-sm tracking-tight leading-none">Misbahul Anam</span>
+                    <span class="text-[10px] text-brand-orangeDark font-bold tracking-wider uppercase mt-0.5">Portofolio</span>
                 </div>
             </a>
 
             <!-- Navigasi Desktop -->
-            <nav class="hidden md:flex items-center gap-1 bg-slate-100/70 p-1.5 rounded-full border border-slate-200/60">
-                <a href="about.html" class="px-4 py-2 text-xs font-semibold text-slate-700 hover:text-brand-600 rounded-full hover:bg-white transition">Beranda</a>
-                <a href="skill.html" class="px-4 py-2 text-xs font-semibold text-brand-700 bg-white rounded-full shadow-sm">Skill</a>
-                <a href="aktivitas.html" class="px-4 py-2 text-xs font-semibold text-slate-700 hover:text-brand-600 rounded-full hover:bg-white transition">Aktivitas</a>
-                <a href="sertifikat.html" class="px-4 py-2 text-xs font-semibold text-slate-700 hover:text-brand-600 rounded-full hover:bg-white transition">Sertifikat</a>
-                <a href="project.html" class="px-4 py-2 text-xs font-semibold text-slate-700 hover:text-brand-600 rounded-full hover:bg-white transition">Project</a>
-                <a href="kontak.html" class="px-4 py-2 text-xs font-semibold text-slate-700 hover:text-brand-600 rounded-full hover:bg-white transition">Kontak</a>
+            <nav class="hidden md:flex items-center gap-1 bg-slate-200/60 p-1.5 rounded-full border border-slate-300/50">
+                <a href="about.html" class="px-4 py-2 text-xs font-semibold text-slate-700 hover:text-brand-orangeDark rounded-full hover:bg-white transition">Beranda</a>
+                <a href="skill.html" class="px-4 py-2 text-xs font-bold text-white bg-gradient-to-r from-brand-blue to-brand-blueLight rounded-full shadow-sm">Skill</a>
+                <a href="aktivitas.html" class="px-4 py-2 text-xs font-semibold text-slate-700 hover:text-brand-orangeDark rounded-full hover:bg-white transition">Aktivitas</a>
+                <a href="sertifikat.html" class="px-4 py-2 text-xs font-semibold text-slate-700 hover:text-brand-orangeDark rounded-full hover:bg-white transition">Sertifikat</a>
+                <a href="project.html" class="px-4 py-2 text-xs font-semibold text-slate-700 hover:text-brand-orangeDark rounded-full hover:bg-white transition">Project</a>
+                <a href="kontak.html" class="px-4 py-2 text-xs font-semibold text-slate-700 hover:text-brand-orangeDark rounded-full hover:bg-white transition">Kontak</a>
             </nav>
 
-            <!-- Tombol Action & Mobile Menu Toggle -->
+            <!-- Action Button & Mobile Toggle -->
             <div class="flex items-center gap-3">
-                <a href="mailto:misbahulanamsidiq5@gmail.com" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-600 hover:bg-brand-700 text-white text-xs font-semibold shadow-md shadow-brand-600/20 hover:shadow-lg transition">
-                    <i class="fa-solid fa-envelope text-xs"></i> Hubungi Saya
+                <a href="kontak.html" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-brand-orange to-brand-red hover:from-brand-orangeDark hover:to-brand-redDark text-white text-xs font-bold shadow-lg shadow-orange-500/20 hover:shadow-orange-500/30 transition-all scale-100 hover:scale-105">
+                    <i class="fa-solid fa-paper-plane text-xs"></i> Hubungi Saya
                 </a>
 
-                <!-- Hamburger Button -->
-                <button id="mobile-menu-btn" class="md:hidden w-10 h-10 rounded-xl bg-slate-100 border border-slate-200 text-slate-700 flex items-center justify-center hover:bg-blue-50 hover:text-brand-600 transition" aria-label="Toggle Menu">
+                <button id="mobile-menu-btn" class="md:hidden w-10 h-10 rounded-xl bg-slate-200/70 border border-slate-300 text-slate-700 flex items-center justify-center hover:bg-white transition" aria-label="Toggle Menu">
                     <i id="menu-icon" class="fa-solid fa-bars text-lg"></i>
                 </button>
             </div>
         </div>
 
         <!-- Menu Mobile Overlay -->
-        <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200/60 bg-white/95 backdrop-blur-lg px-6 py-4 space-y-2 shadow-xl">
-            <a href="about.html" class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-blue-50 hover:text-brand-600 transition">Beranda</a>
-            <a href="skill.html" class="block px-4 py-2.5 rounded-xl text-sm font-bold text-brand-600 bg-blue-50 border border-blue-100 transition">Skill</a>
-            <a href="aktivitas.html" class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-blue-50 hover:text-brand-600 transition">Aktivitas</a>
-            <a href="sertifikat.html" class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-blue-50 hover:text-brand-600 transition">Sertifikat</a>
-            <a href="project.html" class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-blue-50 hover:text-brand-600 transition">Project</a>
-            <a href="kontak.html" class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-blue-50 hover:text-brand-600 transition">Kontak</a>
-            <div class="pt-2">
-                <a href="mailto:misbahulanamsidiq5@gmail.com" class="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-brand-600 text-white text-xs font-bold shadow-md">
-                    <i class="fa-solid fa-envelope text-xs"></i> Hubungi Saya
-                </a>
-            </div>
+        <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 bg-white/95 backdrop-blur-xl px-6 py-4 space-y-2 shadow-2xl">
+            <a href="about.html" class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-orange-50 hover:text-brand-orangeDark transition">Beranda</a>
+            <a href="skill.html" class="block px-4 py-2.5 rounded-xl text-sm font-bold text-white bg-brand-blue transition">Skill</a>
+            <a href="aktivitas.html" class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-orange-50 hover:text-brand-orangeDark transition">Aktivitas</a>
+            <a href="sertifikat.html" class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-orange-50 hover:text-brand-orangeDark transition">Sertifikat</a>
+            <a href="project.html" class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-orange-50 hover:text-brand-orangeDark transition">Project</a>
+            <a href="kontak.html" class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-orange-50 hover:text-brand-orangeDark transition">Kontak</a>
         </div>
     </header>
 
     <!-- KONTEN UTAMA KEAHLIAN -->
-    <main class="max-w-4xl w-full mx-auto relative z-10 space-y-8">
-        
-        <!-- Header Section -->
-        <div class="text-center space-y-3">
-            <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-100/80 border border-orange-200 text-orange-700 text-xs font-semibold tracking-wide uppercase shadow-sm">
-                <i class="fa-solid fa-layer-group text-orange-600"></i> Capabilities
-            </span>
-            <h1 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
-                Keahlian & <span class="bg-gradient-to-r from-brand-600 via-blue-600 to-orange-500 bg-clip-text text-transparent">Kemampuan Utama</span>
-            </h1>
-            <p class="text-slate-500 text-sm max-w-md mx-auto">
-                Kombinasi latar belakang Infrastruktur Jaringan, Frontend & Web Development, serta Kreativitas Desain Visual.
-            </p>
-        </div>
+    <main class="pt-28 pb-20 px-6 relative z-10 flex-grow">
+        <div class="max-w-5xl mx-auto space-y-10">
+            
+            <!-- HEADER SECTION -->
+            <div class="text-center space-y-3 max-w-2xl mx-auto">
+                <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900 text-white text-xs font-bold tracking-wider uppercase shadow-md">
+                    <i class="fa-solid fa-sliders text-brand-orange"></i> Technical Capabilities
+                </span>
+                
+                <h1 class="text-4xl sm:text-5xl font-heading font-black text-slate-900 tracking-tight leading-tight">
+                    Spesialisasi & <span class="text-gradient">Keahlian Utama</span>
+                </h1>
+                <p class="text-sm sm:text-base text-slate-500 font-medium">
+                    Sinergi teknis antara Infrastruktur Jaringan, Pengembangan Web, dan Desain Visual Media.
+                </p>
+            </div>
 
-        <!-- Grid Cards Keahlian -->
-        <div class="grid md:grid-cols-2 gap-6">
-
-            <!-- Card 1: Infrastruktur & Jaringan -->
-            <div class="glass-card rounded-3xl p-6 sm:p-8 glow-bright border border-blue-100 space-y-5">
-                <div class="flex items-center gap-4 border-b border-slate-200/80 pb-4">
-                    <div class="w-12 h-12 rounded-2xl bg-blue-100 text-brand-600 flex items-center justify-center text-xl font-bold flex-shrink-0">
-                        <i class="fa-solid fa-network-wired"></i>
-                    </div>
-                    <div>
-                        <h2 class="text-lg font-bold text-slate-900">Infrastruktur & Jaringan</h2>
-                        <p class="text-xs text-slate-500">Teknik Komputer & Jaringan (SMK YPPD)</p>
-                    </div>
-                </div>
-
-                <div class="space-y-4">
-                    <div class="space-y-1.5">
-                        <div class="flex justify-between text-xs font-bold">
-                            <span class="text-slate-800">MikroTik RouterOS & Routing</span>
-                            <span class="text-brand-600">85%</span>
-                        </div>
-                        <div class="w-full h-2 bg-slate-200/80 rounded-full overflow-hidden">
-                            <div class="h-full bg-gradient-to-r from-brand-600 to-orange-500 rounded-full" style="width: 85%;"></div>
-                        </div>
-                    </div>
-
-                    <div class="space-y-1.5">
-                        <div class="flex justify-between text-xs font-bold">
-                            <span class="text-slate-800">Cisco Packet Tracer / Switching</span>
-                            <span class="text-brand-600">80%</span>
-                        </div>
-                        <div class="w-full h-2 bg-slate-200/80 rounded-full overflow-hidden">
-                            <div class="h-full bg-gradient-to-r from-brand-600 to-orange-500 rounded-full" style="width: 80%;"></div>
-                        </div>
-                    </div>
-
-                    <div class="space-y-1.5">
-                        <div class="flex justify-between text-xs font-bold">
-                            <span class="text-slate-800">Hardware & Linux Server Configuration</span>
-                            <span class="text-brand-600">75%</span>
-                        </div>
-                        <div class="w-full h-2 bg-slate-200/80 rounded-full overflow-hidden">
-                            <div class="h-full bg-gradient-to-r from-brand-600 to-orange-500 rounded-full" style="width: 75%;"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex flex-wrap gap-2 pt-2">
-                    <span class="px-3 py-1 bg-white border border-slate-200 text-slate-600 text-[11px] font-semibold rounded-lg shadow-sm">TCP/IP</span>
-                    <span class="px-3 py-1 bg-white border border-slate-200 text-slate-600 text-[11px] font-semibold rounded-lg shadow-sm">LAN/WAN</span>
-                    <span class="px-3 py-1 bg-white border border-slate-200 text-slate-600 text-[11px] font-semibold rounded-lg shadow-sm">Subnetting</span>
-                    <span class="px-3 py-1 bg-white border border-slate-200 text-slate-600 text-[11px] font-semibold rounded-lg shadow-sm">Debian/Ubuntu</span>
+            <!-- INTERACTIVE TAB FILTER (UI SPECIFIC) -->
+            <div class="flex justify-center">
+                <div class="inline-flex p-1.5 bg-slate-200/80 backdrop-blur-md rounded-2xl border border-slate-300/70 gap-1 overflow-x-auto max-w-full">
+                    <button onclick="filterSkills('all')" id="btn-all" class="tab-btn px-5 py-2 rounded-xl text-xs font-bold transition-all bg-white text-slate-900 shadow-sm">
+                        Semua Keahlian
+                    </button>
+                    <button onclick="filterSkills('net')" id="btn-net" class="tab-btn px-5 py-2 rounded-xl text-xs font-bold transition-all text-slate-600 hover:text-slate-900">
+                        <i class="fa-solid fa-network-wired text-brand-blue mr-1.5"></i> Jaringan & Server
+                    </button>
+                    <button onclick="filterSkills('dev')" id="btn-dev" class="tab-btn px-5 py-2 rounded-xl text-xs font-bold transition-all text-slate-600 hover:text-slate-900">
+                        <i class="fa-solid fa-code text-brand-orange mr-1.5"></i> Web Development
+                    </button>
+                    <button onclick="filterSkills('design')" id="btn-design" class="tab-btn px-5 py-2 rounded-xl text-xs font-bold transition-all text-slate-600 hover:text-slate-900">
+                        <i class="fa-solid fa-pen-nib text-brand-red mr-1.5"></i> Desain Visual
+                    </button>
                 </div>
             </div>
 
-            <!-- Card 2: Software & Web Development -->
-            <div class="glass-card rounded-3xl p-6 sm:p-8 glow-bright border border-blue-100 space-y-5">
-                <div class="flex items-center gap-4 border-b border-slate-200/80 pb-4">
-                    <div class="w-12 h-12 rounded-2xl bg-orange-100 text-orange-600 flex items-center justify-center text-xl font-bold flex-shrink-0">
-                        <i class="fa-solid fa-code"></i>
-                    </div>
-                    <div>
-                        <h2 class="text-lg font-bold text-slate-900">Pengembangan Web & Software</h2>
-                        <p class="text-xs text-slate-500">Teknik Informatika S1 (STT NF)</p>
-                    </div>
-                </div>
+            <!-- GRID CARDS KEAHLIAN PER KATEGORI -->
+            <div class="grid md:grid-cols-2 gap-8">
 
-                <div class="space-y-4">
-                    <div class="space-y-1.5">
-                        <div class="flex justify-between text-xs font-bold">
-                            <span class="text-slate-800">HTML5, CSS3 & Tailwind CSS</span>
-                            <span class="text-brand-600">85%</span>
+                <!-- CARD 1: INFRASTRUKTUR & JARINGAN -->
+                <div class="skill-card category-card glass-card-3d rounded-3xl p-6 sm:p-8 space-y-6" data-category="net">
+                    
+                    <!-- Card Header -->
+                    <div class="flex items-start justify-between border-b border-slate-200 pb-5">
+                        <div class="flex items-center gap-4">
+                            <div class="w-14 h-14 rounded-2xl bg-blue-50 border border-blue-200 text-brand-blue flex items-center justify-center text-2xl font-bold shadow-sm shrink-0">
+                                <i class="fa-solid fa-server"></i>
+                            </div>
+                            <div>
+                                <span class="text-[10px] uppercase font-bold tracking-wider text-brand-blue">Infrastruktur IT</span>
+                                <h2 class="text-xl font-heading font-extrabold text-slate-900">Jaringan & Sistem</h2>
+                                <p class="text-xs text-slate-500 font-medium">Latar Belakang TKJ - SMK YPPD Depok</p>
+                            </div>
                         </div>
-                        <div class="w-full h-2 bg-slate-200/80 rounded-full overflow-hidden">
-                            <div class="h-full bg-gradient-to-r from-brand-600 to-orange-500 rounded-full" style="width: 85%;"></div>
-                        </div>
-                    </div>
-
-                    <div class="space-y-1.5">
-                        <div class="flex justify-between text-xs font-bold">
-                            <span class="text-slate-800">Node.js & Express / JavaScript</span>
-                            <span class="text-brand-600">80%</span>
-                        </div>
-                        <div class="w-full h-2 bg-slate-200/80 rounded-full overflow-hidden">
-                            <div class="h-full bg-gradient-to-r from-brand-600 to-orange-500 rounded-full" style="width: 80%;"></div>
-                        </div>
+                        <span class="px-3 py-1 rounded-full bg-blue-100 text-brand-blue text-[11px] font-extrabold border border-blue-200">
+                            Advanced
+                        </span>
                     </div>
 
-                    <div class="space-y-1.5">
-                        <div class="flex justify-between text-xs font-bold">
-                            <span class="text-slate-800">Database (MySQL / Basis Data)</span>
-                            <span class="text-brand-600">75%</span>
-                        </div>
-                        <div class="w-full h-2 bg-slate-200/80 rounded-full overflow-hidden">
-                            <div class="h-full bg-gradient-to-r from-brand-600 to-orange-500 rounded-full" style="width: 75%;"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex flex-wrap gap-2 pt-2">
-                    <span class="px-3 py-1 bg-white border border-slate-200 text-slate-600 text-[11px] font-semibold rounded-lg shadow-sm">Responsive Design</span>
-                    <span class="px-3 py-1 bg-white border border-slate-200 text-slate-600 text-[11px] font-semibold rounded-lg shadow-sm">Git & GitHub</span>
-                    <span class="px-3 py-1 bg-white border border-slate-200 text-slate-600 text-[11px] font-semibold rounded-lg shadow-sm">RESTful API</span>
-                    <span class="px-3 py-1 bg-white border border-slate-200 text-slate-700 text-[11px] font-semibold rounded-lg shadow-sm">VS Code</span>
-                </div>
-            </div>
-
-            <!-- Card 3: Pembuatan & Pengeditan Foto -->
-            <div class="glass-card rounded-3xl p-6 sm:p-8 glow-bright border border-blue-100 space-y-5 md:col-span-2">
-                <div class="flex items-center gap-4 border-b border-slate-200/80 pb-4">
-                    <div class="w-12 h-12 rounded-2xl bg-blue-100 text-brand-600 flex items-center justify-center text-xl font-bold flex-shrink-0">
-                        <i class="fa-solid fa-camera-retro"></i>
-                    </div>
-                    <div>
-                        <h2 class="text-lg font-bold text-slate-900">Desain Visual & Pengeditan Foto</h2>
-                        <p class="text-xs text-slate-500">Kreativitas Visual, Prototyping UI & Post-Processing</p>
-                    </div>
-                </div>
-
-                <div class="grid md:grid-cols-2 gap-4">
+                    <!-- List Skill Bars (Specific UI Layout) -->
                     <div class="space-y-4">
-                        <div class="space-y-1.5">
-                            <div class="flex justify-between text-xs font-bold">
-                                <span class="text-slate-800">UI/UX Prototyping (Figma)</span>
-                                <span class="text-brand-600">85%</span>
+                        
+                        <!-- Skill Item 1 -->
+                        <div class="space-y-2">
+                            <div class="flex justify-between items-center text-xs font-bold">
+                                <span class="text-slate-800 flex items-center gap-2">
+                                    <i class="fa-solid fa-router text-brand-blue"></i>
+                                    MikroTik RouterOS & Routing Configuration
+                                </span>
+                                <span class="text-brand-blue">85%</span>
                             </div>
-                            <div class="w-full h-2 bg-slate-200/80 rounded-full overflow-hidden">
-                                <div class="h-full bg-gradient-to-r from-brand-600 to-orange-500 rounded-full" style="width: 85%;"></div>
+                            <div class="w-full h-2.5 bg-slate-200/80 rounded-full overflow-hidden p-0.5 border border-slate-300/40">
+                                <div class="h-full bg-gradient-to-r from-brand-blue to-brand-blueLight rounded-full progress-glow-blue" style="width: 85%;"></div>
                             </div>
                         </div>
 
-                        <div class="space-y-1.5">
-                            <div class="flex justify-between text-xs font-bold">
-                                <span class="text-slate-800">Adobe Photoshop / Retouching</span>
-                                <span class="text-brand-600">80%</span>
+                        <!-- Skill Item 2 -->
+                        <div class="space-y-2">
+                            <div class="flex justify-between items-center text-xs font-bold">
+                                <span class="text-slate-800 flex items-center gap-2">
+                                    <i class="fa-solid fa-network-wired text-brand-blue"></i>
+                                    Cisco Packet Tracer / Switching & VLAN
+                                </span>
+                                <span class="text-brand-blue">80%</span>
                             </div>
-                            <div class="w-full h-2 bg-slate-200/80 rounded-full overflow-hidden">
-                                <div class="h-full bg-gradient-to-r from-brand-600 to-orange-500 rounded-full" style="width: 80%;"></div>
+                            <div class="w-full h-2.5 bg-slate-200/80 rounded-full overflow-hidden p-0.5 border border-slate-300/40">
+                                <div class="h-full bg-gradient-to-r from-brand-blue to-brand-blueLight rounded-full progress-glow-blue" style="width: 80%;"></div>
                             </div>
+                        </div>
+
+                        <!-- Skill Item 3 -->
+                        <div class="space-y-2">
+                            <div class="flex justify-between items-center text-xs font-bold">
+                                <span class="text-slate-800 flex items-center gap-2">
+                                    <i class="fa-brands fa-linux text-brand-blue"></i>
+                                    Hardware & Linux Server (Debian/Ubuntu)
+                                </span>
+                                <span class="text-brand-blue">75%</span>
+                            </div>
+                            <div class="w-full h-2.5 bg-slate-200/80 rounded-full overflow-hidden p-0.5 border border-slate-300/40">
+                                <div class="h-full bg-gradient-to-r from-brand-blue to-brand-blueLight rounded-full progress-glow-blue" style="width: 75%;"></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Interactive Badges Sub-skills -->
+                    <div class="pt-2 border-t border-slate-200/80">
+                        <span class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-2.5">Protokol & Tools Terkait</span>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-white border border-slate-200 text-slate-700 text-xs font-bold rounded-xl shadow-xs hover:border-brand-blue transition">TCP/IP</span>
+                            <span class="px-3 py-1 bg-white border border-slate-200 text-slate-700 text-xs font-bold rounded-xl shadow-xs hover:border-brand-blue transition">Subnetting CIDR</span>
+                            <span class="px-3 py-1 bg-white border border-slate-200 text-slate-700 text-xs font-bold rounded-xl shadow-xs hover:border-brand-blue transition">LAN/WAN Topology</span>
+                            <span class="px-3 py-1 bg-white border border-slate-200 text-slate-700 text-xs font-bold rounded-xl shadow-xs hover:border-brand-blue transition">DHCP / DNS / NAT</span>
                         </div>
                     </div>
 
+                </div>
+
+                <!-- CARD 2: WEB & SOFTWARE DEVELOPMENT -->
+                <div class="skill-card category-card glass-card-3d rounded-3xl p-6 sm:p-8 space-y-6" data-category="dev">
+                    
+                    <!-- Card Header -->
+                    <div class="flex items-start justify-between border-b border-slate-200 pb-5">
+                        <div class="flex items-center gap-4">
+                            <div class="w-14 h-14 rounded-2xl bg-orange-50 border border-orange-200 text-brand-orange flex items-center justify-center text-2xl font-bold shadow-sm shrink-0">
+                                <i class="fa-solid fa-code"></i>
+                            </div>
+                            <div>
+                                <span class="text-[10px] uppercase font-bold tracking-wider text-brand-orangeDark">Rekayasa Software</span>
+                                <h2 class="text-xl font-heading font-extrabold text-slate-900">Web Development</h2>
+                                <p class="text-xs text-slate-500 font-medium">Teknik Informatika S1 - STT NF</p>
+                            </div>
+                        </div>
+                        <span class="px-3 py-1 rounded-full bg-orange-100 text-brand-orangeDark text-[11px] font-extrabold border border-orange-200">
+                            Intermediate
+                        </span>
+                    </div>
+
+                    <!-- List Skill Bars -->
                     <div class="space-y-4">
-                        <div class="space-y-1.5">
-                            <div class="flex justify-between text-xs font-bold">
-                                <span class="text-slate-800">Lightroom / Color Grading</span>
-                                <span class="text-brand-600">80%</span>
+                        
+                        <!-- Skill Item 1 -->
+                        <div class="space-y-2">
+                            <div class="flex justify-between items-center text-xs font-bold">
+                                <span class="text-slate-800 flex items-center gap-2">
+                                    <i class="fa-brands fa-html5 text-brand-orange"></i>
+                                    HTML5, CSS3 & Tailwind CSS Modern
+                                </span>
+                                <span class="text-brand-orangeDark">85%</span>
                             </div>
-                            <div class="w-full h-2 bg-slate-200/80 rounded-full overflow-hidden">
-                                <div class="h-full bg-gradient-to-r from-brand-600 to-orange-500 rounded-full" style="width: 80%;"></div>
+                            <div class="w-full h-2.5 bg-slate-200/80 rounded-full overflow-hidden p-0.5 border border-slate-300/40">
+                                <div class="h-full bg-gradient-to-r from-brand-orange to-brand-orangeDark rounded-full progress-glow-orange" style="width: 85%;"></div>
                             </div>
                         </div>
 
-                        <div class="space-y-1.5">
-                            <div class="flex justify-between text-xs font-bold">
-                                <span class="text-slate-800">Fotografi Produk & Asset Layout</span>
-                                <span class="text-brand-600">75%</span>
+                        <!-- Skill Item 2 -->
+                        <div class="space-y-2">
+                            <div class="flex justify-between items-center text-xs font-bold">
+                                <span class="text-slate-800 flex items-center gap-2">
+                                    <i class="fa-brands fa-node-js text-brand-orange"></i>
+                                    JavaScript ES6 / Node.js & Express
+                                </span>
+                                <span class="text-brand-orangeDark">80%</span>
                             </div>
-                            <div class="w-full h-2 bg-slate-200/80 rounded-full overflow-hidden">
-                                <div class="h-full bg-gradient-to-r from-brand-600 to-orange-500 rounded-full" style="width: 75%;"></div>
+                            <div class="w-full h-2.5 bg-slate-200/80 rounded-full overflow-hidden p-0.5 border border-slate-300/40">
+                                <div class="h-full bg-gradient-to-r from-brand-orange to-brand-orangeDark rounded-full progress-glow-orange" style="width: 80%;"></div>
                             </div>
+                        </div>
+
+                        <!-- Skill Item 3 -->
+                        <div class="space-y-2">
+                            <div class="flex justify-between items-center text-xs font-bold">
+                                <span class="text-slate-800 flex items-center gap-2">
+                                    <i class="fa-solid fa-database text-brand-orange"></i>
+                                    Relational Database (MySQL / MariaDB)
+                                </span>
+                                <span class="text-brand-orangeDark">75%</span>
+                            </div>
+                            <div class="w-full h-2.5 bg-slate-200/80 rounded-full overflow-hidden p-0.5 border border-slate-300/40">
+                                <div class="h-full bg-gradient-to-r from-brand-orange to-brand-orangeDark rounded-full progress-glow-orange" style="width: 75%;"></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Interactive Badges Sub-skills -->
+                    <div class="pt-2 border-t border-slate-200/80">
+                        <span class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-2.5">Tech Stack & Tools</span>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-white border border-slate-200 text-slate-700 text-xs font-bold rounded-xl shadow-xs hover:border-brand-orange transition">REST API</span>
+                            <span class="px-3 py-1 bg-white border border-slate-200 text-slate-700 text-xs font-bold rounded-xl shadow-xs hover:border-brand-orange transition">Git & GitHub</span>
+                            <span class="px-3 py-1 bg-white border border-slate-200 text-slate-700 text-xs font-bold rounded-xl shadow-xs hover:border-brand-orange transition">Responsive Layout</span>
+                            <span class="px-3 py-1 bg-white border border-slate-200 text-slate-700 text-xs font-bold rounded-xl shadow-xs hover:border-brand-orange transition">VS Code</span>
                         </div>
                     </div>
+
                 </div>
 
-                <div class="flex flex-wrap gap-2 pt-2">
-                    <span class="px-3 py-1 bg-white border border-slate-200 text-slate-600 text-[11px] font-semibold rounded-lg shadow-sm">Figma UI/UX</span>
-                    <span class="px-3 py-1 bg-white border border-slate-200 text-slate-600 text-[11px] font-semibold rounded-lg shadow-sm">Photo Editing</span>
-                    <span class="px-3 py-1 bg-white border border-slate-200 text-slate-600 text-[11px] font-semibold rounded-lg shadow-sm">Adobe Photoshop</span>
-                    <span class="px-3 py-1 bg-white border border-slate-200 text-slate-600 text-[11px] font-semibold rounded-lg shadow-sm">Lightroom</span>
-                    <span class="px-3 py-1 bg-white border border-slate-200 text-slate-600 text-[11px] font-semibold rounded-lg shadow-sm">Color Correction</span>
+                <!-- CARD 3: DESAIN VISUAL & MEDIA (WIDE CARD UI) -->
+                <div class="skill-card category-card glass-card-3d rounded-3xl p-6 sm:p-8 space-y-6 md:col-span-2" data-category="design">
+                    
+                    <!-- Card Header -->
+                    <div class="flex items-start justify-between border-b border-slate-200 pb-5">
+                        <div class="flex items-center gap-4">
+                            <div class="w-14 h-14 rounded-2xl bg-red-50 border border-red-200 text-brand-red flex items-center justify-center text-2xl font-bold shadow-sm shrink-0">
+                                <i class="fa-solid fa-palette"></i>
+                            </div>
+                            <div>
+                                <span class="text-[10px] uppercase font-bold tracking-wider text-brand-red">Kreativitas Visual</span>
+                                <h2 class="text-xl font-heading font-extrabold text-slate-900">UI/UX Design & Post-Processing</h2>
+                                <p class="text-xs text-slate-500 font-medium">Desain Antarmuka, Editing Foto, dan Color Grading</p>
+                            </div>
+                        </div>
+                        <span class="px-3 py-1 rounded-full bg-red-100 text-brand-redDark text-[11px] font-extrabold border border-red-200">
+                            Creative Specialist
+                        </span>
+                    </div>
+
+                    <!-- Inner Grid 2 Kolom untuk Skill Bars -->
+                    <div class="grid md:grid-cols-2 gap-6">
+                        
+                        <div class="space-y-4">
+                            <!-- Skill Item 1 -->
+                            <div class="space-y-2">
+                                <div class="flex justify-between items-center text-xs font-bold">
+                                    <span class="text-slate-800 flex items-center gap-2">
+                                        <i class="fa-brands fa-figma text-brand-red"></i>
+                                        UI/UX Wireframing & Prototyping (Figma)
+                                    </span>
+                                    <span class="text-brand-redDark">85%</span>
+                                </div>
+                                <div class="w-full h-2.5 bg-slate-200/80 rounded-full overflow-hidden p-0.5 border border-slate-300/40">
+                                    <div class="h-full bg-gradient-to-r from-brand-red to-brand-redDark rounded-full progress-glow-red" style="width: 85%;"></div>
+                                </div>
+                            </div>
+
+                            <!-- Skill Item 2 -->
+                            <div class="space-y-2">
+                                <div class="flex justify-between items-center text-xs font-bold">
+                                    <span class="text-slate-800 flex items-center gap-2">
+                                        <i class="fa-solid fa-image text-brand-red"></i>
+                                        Adobe Photoshop (Photo Manipulation & Retouching)
+                                    </span>
+                                    <span class="text-brand-redDark">80%</span>
+                                </div>
+                                <div class="w-full h-2.5 bg-slate-200/80 rounded-full overflow-hidden p-0.5 border border-slate-300/40">
+                                    <div class="h-full bg-gradient-to-r from-brand-red to-brand-redDark rounded-full progress-glow-red" style="width: 80%;"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="space-y-4">
+                            <!-- Skill Item 3 -->
+                            <div class="space-y-2">
+                                <div class="flex justify-between items-center text-xs font-bold">
+                                    <span class="text-slate-800 flex items-center gap-2">
+                                        <i class="fa-solid fa-sliders text-brand-red"></i>
+                                        Adobe Lightroom (Color Grading & Correction)
+                                    </span>
+                                    <span class="text-brand-redDark">80%</span>
+                                </div>
+                                <div class="w-full h-2.5 bg-slate-200/80 rounded-full overflow-hidden p-0.5 border border-slate-300/40">
+                                    <div class="h-full bg-gradient-to-r from-brand-red to-brand-redDark rounded-full progress-glow-red" style="width: 80%;"></div>
+                                </div>
+                            </div>
+
+                            <!-- Skill Item 4 -->
+                            <div class="space-y-2">
+                                <div class="flex justify-between items-center text-xs font-bold">
+                                    <span class="text-slate-800 flex items-center gap-2">
+                                        <i class="fa-solid fa-camera-retro text-brand-red"></i>
+                                        Fotografi Produk & Visual Asset Composition
+                                    </span>
+                                    <span class="text-brand-redDark">75%</span>
+                                </div>
+                                <div class="w-full h-2.5 bg-slate-200/80 rounded-full overflow-hidden p-0.5 border border-slate-300/40">
+                                    <div class="h-full bg-gradient-to-r from-brand-red to-brand-redDark rounded-full progress-glow-red" style="width: 75%;"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Interactive Badges Sub-skills -->
+                    <div class="pt-2 border-t border-slate-200/80">
+                        <span class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-2.5">Aplikasi & Kompetensi Visual</span>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-white border border-slate-200 text-slate-700 text-xs font-bold rounded-xl shadow-xs hover:border-brand-red transition">Figma Component System</span>
+                            <span class="px-3 py-1 bg-white border border-slate-200 text-slate-700 text-xs font-bold rounded-xl shadow-xs hover:border-brand-red transition">Photo Retouching</span>
+                            <span class="px-3 py-1 bg-white border border-slate-200 text-slate-700 text-xs font-bold rounded-xl shadow-xs hover:border-brand-red transition">Color Profile Preset</span>
+                            <span class="px-3 py-1 bg-white border border-slate-200 text-slate-700 text-xs font-bold rounded-xl shadow-xs hover:border-brand-red transition">Design System</span>
+                        </div>
+                    </div>
+
                 </div>
+
             </div>
 
         </div>
-
     </main>
 
     <!-- FOOTER -->
-    <footer class="w-full py-8 px-6 border-t border-slate-200/80 bg-white relative z-10 text-xs text-slate-500 mt-16">
-        <div class="max-w-4xl mx-auto flex items-center justify-center gap-2 text-xs font-medium text-slate-600">
-            <span class="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
-            <p>
-                &copy; 2026 <span class="bg-gradient-to-r from-brand-600 to-orange-500 bg-clip-text text-transparent font-bold">Misbahul Anam Sidiq</span>. All rights reserved.
-            </p>
+    <footer class="py-8 px-6 border-t border-slate-200 bg-white relative z-10 text-xs text-slate-500">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-2 font-medium">
+                <span class="w-2 h-2 rounded-full bg-brand-orange animate-pulse"></span>
+                <p>&copy; 2026 <span class="font-bold text-slate-900">Misbahul Anam Sidiq</span>. All rights reserved.</p>
+            </div>
+            
+            <div class="flex gap-4 text-base">
+                <a href="https://github.com/misbahulanam2206" target="_blank" class="w-8 h-8 rounded-lg bg-slate-100 hover:bg-brand-blue hover:text-white text-slate-600 flex items-center justify-center transition"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/feed/" target="_blank" class="w-8 h-8 rounded-lg bg-slate-100 hover:bg-brand-orange hover:text-white text-slate-600 flex items-center justify-center transition"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/misbah.anam22/" target="_blank" class="w-8 h-8 rounded-lg bg-slate-100 hover:bg-brand-red hover:text-white text-slate-600 flex items-center justify-center transition"><i class="fa-brands fa-instagram"></i></a>
+            </div>
         </div>
     </footer>
 
-    <!-- Script Toggling Mobile Menu -->
+    <!-- SCRIPT TABS FILTER & MOBILE MENU -->
     <script>
+        // Toggle Mobile Menu
         const btn = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
         const icon = document.getElementById('menu-icon');
@@ -339,6 +464,34 @@
                 icon.classList.add('fa-xmark');
             }
         });
+
+        // Tab Filter Functions (Interactive UI)
+        function filterSkills(category) {
+            const cards = document.querySelectorAll('.category-card');
+            const buttons = document.querySelectorAll('.tab-btn');
+
+            // Reset active button style
+            buttons.forEach(b => {
+                b.classList.remove('bg-white', 'text-slate-900', 'shadow-sm');
+                b.classList.add('text-slate-600');
+            });
+
+            // Set active button
+            const activeBtn = document.getElementById('btn-' + category);
+            if(activeBtn) {
+                activeBtn.classList.add('bg-white', 'text-slate-900', 'shadow-sm');
+                activeBtn.classList.remove('text-slate-600');
+            }
+
+            // Filter cards
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
     </script>
 </body>
 </html>
