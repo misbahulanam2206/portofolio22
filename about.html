@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profil Diri | Misbahul Anam Sidiq</title>
     
-    <!-- Font Inter & Playfair -->
+    <!-- Font Inter & Montserrat -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
     
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -20,22 +20,18 @@
             theme: {
                 extend: {
                     colors: {
-                        crimson: {
-                            50: '#fff1f2',
-                            100: '#ffe4e6',
-                            200: '#fecdd3',
-                            300: '#fda4af',
-                            400: '#fb7185',
-                            500: '#f43f5e',
-                            600: '#e11d48',
-                            700: '#be123c',
-                            800: '#9f1239',
-                            900: '#881337',
+                        brand: {
+                            blue: '#1e40af',      /* Electric Deep Blue */
+                            blueLight: '#3b82f6',
+                            orange: '#f97316',    /* Vibrant Orange */
+                            orangeDark: '#ea580c',
+                            red: '#ef4444',       /* Energetic Crimson Red */
+                            redDark: '#dc2626'
                         }
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif']
+                        heading: ['Montserrat', 'sans-serif']
                     }
                 }
             }
@@ -43,124 +39,205 @@
     </script>
 
     <style>
-        .glass-card {
+        .glass-card-3d {
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(226, 232, 240, 0.9);
+            box-shadow: 0 20px 40px -15px rgba(30, 64, 175, 0.07), 0 10px 20px -10px rgba(249, 115, 22, 0.05);
+        }
+        .glass-nav {
             background: rgba(255, 255, 255, 0.85);
             backdrop-filter: blur(16px);
-            border: 1px solid rgba(225, 29, 72, 0.12);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.8);
         }
-        .glow-bright {
-            box-shadow: 0 20px 40px -15px rgba(225, 29, 72, 0.15);
+        .gradient-border-box {
+            position: relative;
+            background: #ffffff;
+            border-radius: 1.5rem;
+        }
+        .gradient-border-box::before {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            border-radius: 1.6rem;
+            background: linear-gradient(135deg, #1e40af, #f97316, #ef4444);
+            z-index: -1;
+            opacity: 0.85;
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #1e40af 0%, #ea580c 50%, #dc2626 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased selection:bg-crimson-500 selection:text-white min-h-screen relative overflow-x-hidden flex flex-col justify-between">
+<body class="bg-slate-100/70 text-slate-800 antialiased selection:bg-brand-orange selection:text-white min-h-screen relative overflow-x-hidden flex flex-col justify-between">
 
-    <!-- Efek Cahaya / Ambient Gradient Cerah -->
-    <div class="fixed -top-40 -left-40 w-[600px] h-[600px] bg-rose-200/50 rounded-full blur-[140px] pointer-events-none z-0"></div>
-    <div class="fixed top-1/3 -right-40 w-[500px] h-[500px] bg-crimson-100/60 rounded-full blur-[140px] pointer-events-none z-0"></div>
-    <div class="fixed -bottom-40 left-1/3 w-[550px] h-[550px] bg-amber-100/50 rounded-full blur-[150px] pointer-events-none z-0"></div>
+    <!-- Ambient Glow Multi-Warna (Biru, Orange, Merah) -->
+    <div class="fixed -top-32 -left-32 w-[550px] h-[550px] bg-blue-500/15 rounded-full blur-[140px] pointer-events-none z-0"></div>
+    <div class="fixed top-1/2 -right-32 w-[500px] h-[500px] bg-orange-500/15 rounded-full blur-[140px] pointer-events-none z-0"></div>
+    <div class="fixed -bottom-32 left-1/3 w-[500px] h-[500px] bg-red-500/15 rounded-full blur-[150px] pointer-events-none z-0"></div>
 
-    <!-- Navigasi -->
-    <nav class="fixed top-0 left-0 w-full z-50 glass-card border-b border-rose-100/80 shadow-sm">
-        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-            <a href="#" class="font-serif text-2xl font-bold tracking-tight text-slate-900">
-                Misbah<span class="text-crimson-600">-</span>dev
+    <!-- NAVBAR RESPONSIF -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-nav">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            
+            <!-- Logo / Branding UI Baru -->
+            <a href="about.html" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-blue via-brand-orange to-brand-red text-white flex items-center justify-center font-black text-lg shadow-md group-hover:scale-105 transition-transform">
+                    M
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-heading font-extrabold text-slate-900 text-sm tracking-tight leading-none">Misbahul Anam</span>
+                    <span class="text-[10px] text-brand-orangeDark font-bold tracking-wider uppercase mt-0.5">Portofolio</span>
+                </div>
             </a>
-            <div class="flex items-center gap-6 text-sm font-semibold text-slate-600">
-                <a href="#tentang" class="hover:text-crimson-600 transition">Tentang Saya</a>
-                <a href="#lokasi" class="hover:text-crimson-600 transition">Lokasi Rumah</a>
+
+            <!-- Navigasi Desktop -->
+            <nav class="hidden md:flex items-center gap-1 bg-slate-200/60 p-1.5 rounded-full border border-slate-300/50">
+                <a href="about.html" class="px-4 py-2 text-xs font-bold text-white bg-gradient-to-r from-brand-blue to-brand-blueLight rounded-full shadow-sm">Beranda</a>
+                <a href="skill.html" class="px-4 py-2 text-xs font-semibold text-slate-700 hover:text-brand-orangeDark rounded-full hover:bg-white transition">Skill</a>
+                <a href="aktivitas.html" class="px-4 py-2 text-xs font-semibold text-slate-700 hover:text-brand-orangeDark rounded-full hover:bg-white transition">Aktivitas</a>
+                <a href="sertifikat.html" class="px-4 py-2 text-xs font-semibold text-slate-700 hover:text-brand-orangeDark rounded-full hover:bg-white transition">Sertifikat</a>
+                <a href="project.html" class="px-4 py-2 text-xs font-semibold text-slate-700 hover:text-brand-orangeDark rounded-full hover:bg-white transition">Project</a>
+                <a href="kontak.html" class="px-4 py-2 text-xs font-semibold text-slate-700 hover:text-brand-orangeDark rounded-full hover:bg-white transition">Kontak</a>
+            </nav>
+
+            <!-- Action Button & Mobile Toggle -->
+            <div class="flex items-center gap-3">
+                <a href="kontak.html" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-brand-orange to-brand-red hover:from-brand-orangeDark hover:to-brand-redDark text-white text-xs font-bold shadow-lg shadow-orange-500/20 hover:shadow-orange-500/30 transition-all scale-100 hover:scale-105">
+                    <i class="fa-solid fa-paper-plane text-xs"></i> Hubungi Saya
+                </a>
+
+                <button id="mobile-menu-btn" class="md:hidden w-10 h-10 rounded-xl bg-slate-200/70 border border-slate-300 text-slate-700 flex items-center justify-center hover:bg-white transition" aria-label="Toggle Menu">
+                    <i id="menu-icon" class="fa-solid fa-bars text-lg"></i>
+                </button>
             </div>
         </div>
-    </nav>
+
+        <!-- Menu Mobile Overlay -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 bg-white/95 backdrop-blur-xl px-6 py-4 space-y-2 shadow-2xl">
+            <a href="about.html" class="block px-4 py-2.5 rounded-xl text-sm font-bold text-white bg-brand-blue transition">Beranda</a>
+            <a href="skill.html" class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-orange-50 hover:text-brand-orangeDark transition">Skill</a>
+            <a href="aktivitas.html" class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-orange-50 hover:text-brand-orangeDark transition">Aktivitas</a>
+            <a href="sertifikat.html" class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-orange-50 hover:text-brand-orangeDark transition">Sertifikat</a>
+            <a href="project.html" class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-orange-50 hover:text-brand-orangeDark transition">Project</a>
+            <a href="kontak.html" class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-orange-50 hover:text-brand-orangeDark transition">Kontak</a>
+        </div>
+    </header>
 
     <!-- KONTEN UTAMA -->
-    <main class="pt-32 pb-20 px-6 relative z-10 flex-grow">
-        <div class="max-w-4xl mx-auto space-y-12">
+    <main class="pt-28 pb-20 px-6 relative z-10 flex-grow">
+        <div class="max-w-5xl mx-auto space-y-12">
             
-            <!-- SECTION TENTANG SAYA & PERKENALAN -->
+            <!-- HERO / PROFILE SECTION -->
             <section id="tentang" class="space-y-8">
-                <!-- Header Halaman -->
-                <div class="text-center space-y-4 max-w-2xl mx-auto">
-                    <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-rose-100/80 border border-rose-200 text-crimson-700 text-xs font-semibold tracking-wide uppercase shadow-sm">
-                        <span class="w-2 h-2 rounded-full bg-crimson-600 animate-ping"></span> Profil Diri
+                
+                <!-- Badge Tag & Header Title -->
+                <div class="text-center space-y-3 max-w-3xl mx-auto">
+                    <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900 text-white text-xs font-bold tracking-wider uppercase shadow-md">
+                        <span class="w-2.5 h-2.5 rounded-full bg-brand-red animate-pulse"></span>
+                        <span class="text-brand-orange">Personal</span> Profile
                     </span>
-                    <h1 class="text-4xl sm:text-5xl font-black text-slate-900 tracking-tight leading-tight">
-                        Perkenalkan saya <span class="bg-gradient-to-r from-crimson-600 to-rose-500 bg-clip-text text-transparent">Misbahul Anam Sidiq</span>
+                    
+                    <h1 class="text-4xl sm:text-5xl font-heading font-black text-slate-900 tracking-tight leading-tight">
+                        Halo, Saya <span class="text-gradient">Misbahul Anam Sidiq</span>
                     </h1>
+                    <p class="text-sm sm:text-base text-slate-500 font-medium">
+                        Teknik Informatika & Infrastructure Specialist Berbasis di Depok
+                    </p>
                 </div>
 
-                <!-- Card Profil & Deskripsi -->
-                <div class="glass-card rounded-3xl p-8 sm:p-10 glow-bright border border-rose-100 grid md:grid-cols-12 gap-8 items-center">
-                    <!-- Foto / Avatar -->
-                    <div class="md:col-span-4 flex flex-col items-center justify-center space-y-3">
-                        <div class="w-44 h-44 sm:w-48 sm:h-48 rounded-3xl overflow-hidden border-4 border-white shadow-xl bg-slate-100 relative group">
-                            <img src="images/Foto1.png" alt="Misbahul Anam Sidiq" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=600'">
+                <!-- Card Profil Utama (Model Grid UI Baru) -->
+                <div class="glass-card-3d rounded-3xl p-6 sm:p-10 grid lg:grid-cols-12 gap-8 items-center">
+                    
+                    <!-- Avatar dengan Border Gradient Accent -->
+                    <div class="lg:col-span-5 flex flex-col items-center justify-center space-y-4">
+                        <div class="gradient-border-box p-1.5 shadow-2xl">
+                            <div class="w-48 h-48 sm:w-56 sm:h-56 rounded-[1.3rem] overflow-hidden bg-slate-900 relative group">
+                                <img src="images/Foto1.png" alt="Misbahul Anam Sidiq" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=600'">
+                            </div>
                         </div>
-                        <span class="text-xs font-bold text-slate-500 tracking-wider uppercase"><i class="fa-solid fa-code text-crimson-600 mr-1"></i> Web Deveploment & Tech Enthusiast</span>
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-blue-50 border border-blue-200 text-brand-blue font-bold text-xs">
+                            <i class="fa-solid fa-code"></i>
+                            <span>Web Dev & IT Infrastructure</span>
+                        </div>
                     </div>
 
-                    <!-- Detail Perkenalan Diri -->
-                    <div class="md:col-span-8 space-y-4 text-slate-600 text-sm sm:text-base leading-relaxed">
+                    <!-- Detail Bio & Narasi -->
+                    <div class="lg:col-span-7 space-y-5 text-slate-600 text-sm sm:text-base leading-relaxed">
                         <p>
-                            Perkenalkan!!! saya adalah <strong class="text-slate-900 font-bold">Misbahul Anam Sidiq</strong>, namun Anda bisa cukup menyapa saya dengan panggilan <strong class="text-crimson-600 font-bold">Misbah/Anam</strong>.
+                            Perkenalkan, saya <strong class="text-slate-900 font-bold">Misbahul Anam Sidiq</strong> (akrab disapa <span class="text-brand-blue font-bold">Misbah</span> / <span class="text-brand-orangeDark font-bold">Anam</span>). Saya berdomisili di <strong class="text-slate-900 font-bold">Depok, Jawa Barat</strong>.
                         </p>
                         <p>
-                            Saya berdomisili di <strong class="text-slate-900 font-bold">Depok, Jawa Barat</strong>. Memiliki latar belakang pendidikan dari <strong class="text-slate-900 font-bold">SMK YPPD Depok</strong> jurusan <strong class="text-slate-900 font-bold">Teknik Komputer dan Jaringan (TKJ)</strong>, dan saat ini saya sedang menempuh studi S1 <strong class="text-slate-900 font-bold">Teknik Informatika</strong> di <strong class="text-slate-900 font-bold">STT Terpadu Nurul Fikri</strong>.
+                            Perjalanan pendidikan saya dimulai dari <strong class="text-slate-900 font-bold">SMK YPPD Depok</strong> jurusan <span class="text-brand-red font-bold">Teknik Komputer dan Jaringan (TKJ)</span>, dan saat ini sedang melanjutkan jenjang S1 <strong class="text-slate-900 font-bold">Teknik Informatika</strong> di <span class="text-brand-blue font-bold">STT Terpadu Nurul Fikri</span>.
                         </p>
                         <p>
-                            Saya memiliki ketertarikan mendalam pada dunia pengembangan perangkat lunak (*software engineering*), infrastruktur jaringan, serta perancangan pengalaman antarmuka (*UI/UX design*).
+                            Fokus utama saya meliputi rekayasa perangkat lunak (*software engineering*), arsitektur jaringan, serta perancangan antarmuka visual (*UI/UX Design*). Melalui portofolio ini, saya siap berkolaborasi dan memberikan solusi IT terbaik secara profesional.
                         </p>
-                            <p>
-                                Dengan portofolio ini saya mampu memiliki problem solving tentang bahasa pemrograman yang sudah pernah di ajarkan selma kuliah ini dan bisa dilirik oleh perusahaan agar bisa berkembang bersama memilki komunikasi yang baik dan mampu berkolaborasi dalam bidang teknologi informasi dan IT ini. 
-                            </p>
-                        <!-- Highlights Badge -->
-                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
-                            <div class="p-3 bg-white rounded-2xl border border-slate-200/80 shadow-sm flex items-center gap-3">
-                                <i class="fa-solid fa-user-tag text-crimson-600 text-lg"></i>
-                                <div>
-                                    <span class="block text-[10px] uppercase font-bold text-slate-400">Panggilan</span>
-                                    <span class="text-xs font-bold text-slate-800">Misbah</span>
-                                </div>
-                            </div>
-                            <div class="p-3 bg-white rounded-2xl border border-slate-200/80 shadow-sm flex items-center gap-3">
-                                <i class="fa-solid fa-house-user text-crimson-600 text-lg"></i>
-                                <div>
-                                    <span class="block text-[10px] uppercase font-bold text-slate-400">Domisili</span>
-                                    <span class="text-xs font-bold text-slate-800">Kp Lio Depok, Jabar</span>
-                                </div>
-                            </div>
-                            <div class="p-3 bg-white rounded-2xl border border-slate-200/80 shadow-sm flex items-center gap-3 col-span-2 sm:col-span-1">
-                                <i class="fa-solid fa-graduation-cap text-crimson-600 text-lg"></i>
-                                <div>
-                                    <span class="block text-[10px] uppercase font-bold text-slate-400">Kampus</span>
-                                    <span class="text-xs font-bold text-slate-800">STT Terpadu Nurul Fikri</span>
-                                </div>
 
-                      <div class="p-3 bg-white rounded-2xl border border-slate-200/80 shadow-sm flex items-center gap-3 col-span-2 sm:col-span-1">
-                                <i class="fa-solid fa-graduation-cap text-crimson-600 text-lg"></i>
-                                <!-- Menambahkan mt-1 atau pt-0.5 agar konten teks agak turun ke bawah -->
-                                <div class="mt-1">
-                                    <!-- Class disemprotkan dipisah: block text-[10px] -->
-                                    <span class="block text-[10px] uppercase font-bold text-slate-400 leading-tight">Lulusan Sekolah</span>
-                                    <span class="text-xs font-bold text-slate-800">SMK YPPD DEPOK</span>
+                        <!-- Grid Tag Informasi Singkat UI Baru -->
+                        <div class="grid grid-cols-2 sm:grid-cols-2 gap-3 pt-3">
+                            <div class="p-3.5 rounded-2xl bg-gradient-to-br from-blue-50 to-indigo-50/50 border border-blue-100 flex items-center gap-3">
+                                <div class="w-9 h-9 rounded-xl bg-brand-blue text-white flex items-center justify-center text-sm shadow-sm shrink-0">
+                                    <i class="fa-solid fa-user-tag"></i>
+                                </div>
+                                <div>
+                                    <span class="block text-[10px] uppercase font-bold text-blue-500 tracking-wider">Panggilan</span>
+                                    <span class="text-xs font-bold text-slate-800">Misbah / Anam</span>
                                 </div>
                             </div>
+
+                            <div class="p-3.5 rounded-2xl bg-gradient-to-br from-orange-50 to-amber-50/50 border border-orange-100 flex items-center gap-3">
+                                <div class="w-9 h-9 rounded-xl bg-brand-orange text-white flex items-center justify-center text-sm shadow-sm shrink-0">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <span class="block text-[10px] uppercase font-bold text-orange-500 tracking-wider">Domisili</span>
+                                    <span class="text-xs font-bold text-slate-800">Kp Lio, Depok</span>
+                                </div>
+                            </div>
+
+                            <div class="p-3.5 rounded-2xl bg-gradient-to-br from-red-50 to-rose-50/50 border border-red-100 flex items-center gap-3">
+                                <div class="w-9 h-9 rounded-xl bg-brand-red text-white flex items-center justify-center text-sm shadow-sm shrink-0">
+                                    <i class="fa-solid fa-graduation-cap"></i>
+                                </div>
+                                <div>
+                                    <span class="block text-[10px] uppercase font-bold text-red-500 tracking-wider">Perguruan Tinggi</span>
+                                    <span class="text-xs font-bold text-slate-800">STT Nurul Fikri</span>
+                                </div>
+                            </div>
+
+                            <div class="p-3.5 rounded-2xl bg-gradient-to-br from-slate-100 to-slate-200/60 border border-slate-300/60 flex items-center gap-3">
+                                <div class="w-9 h-9 rounded-xl bg-slate-800 text-white flex items-center justify-center text-sm shadow-sm shrink-0">
+                                    <i class="fa-solid fa-school"></i>
+                                </div>
+                                <div>
+                                    <span class="block text-[10px] uppercase font-bold text-slate-500 tracking-wider">Pendidikan SMK</span>
+                                    <span class="text-xs font-bold text-slate-800">SMK YPPD Depok</span>
+                                </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </section>
 
-            <!-- SECTION MAPS LOKASI RUMAH / DOMISILI -->
+            <!-- SECTION LOKASI RUMAH / MAPS -->
             <section id="lokasi" class="space-y-6">
-                <div class="text-center space-y-2">
-                    <span class="text-xs font-bold uppercase tracking-widest text-crimson-600 font-sans">Peta Lokasi</span>
-                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Lokasi Rumah / Domisili</h2>
+                <div class="flex items-center justify-between border-b border-slate-200 pb-4">
+                    <div class="space-y-1">
+                        <span class="text-xs font-extrabold uppercase tracking-widest text-brand-orangeDark">Peta Wilayah</span>
+                        <h2 class="text-2xl sm:text-3xl font-heading font-black text-slate-900">Lokasi Domisili</h2>
+                    </div>
+                    <a href="https://maps.google.com/?q=Depok,Jawa+Barat" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white border border-slate-300 text-slate-700 hover:text-brand-orangeDark font-bold text-xs shadow-sm transition">
+                        <span>Buka di Google Maps</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                    </a>
                 </div>
 
-                <div class="glass-card rounded-3xl p-4 glow-bright border border-rose-100 overflow-hidden space-y-4">
-                    <div class="w-full h-[380px] rounded-2xl overflow-hidden relative border border-slate-200/80 shadow-inner">
-                        <!-- Embed Google Maps Depok -->
+                <div class="glass-card-3d rounded-3xl p-4 space-y-4">
+                    <div class="w-full h-[360px] rounded-2xl overflow-hidden relative border border-slate-200 shadow-inner">
                         <iframe 
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126880.89069275191!2d106.74232320478174!3d-6.402484391264426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69eb20f51270c5%3A0x301576d141e20e0!2sDepok%2C%20Kota%20Depok%2C%20Jawa%20Barat!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" 
                             width="100%" 
@@ -172,13 +249,16 @@
                             title="Lokasi Domisili Misbahul Anam Sidiq">
                         </iframe>
                     </div>
-                    <div class="flex flex-col sm:flex-row items-center justify-between gap-3 px-2 text-xs">
-                        <div class="flex items-center gap-2 text-slate-600">
-                            <i class="fa-solid fa-location-dot text-crimson-600"></i>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-between gap-3 px-2 text-xs font-medium">
+                        <div class="flex items-center gap-2 text-slate-700">
+                            <span class="w-3 h-3 rounded-full bg-brand-red flex items-center justify-center text-[8px] text-white">
+                                <i class="fa-solid fa-circle"></i>
+                            </span>
                             <span>Depok, Jawa Barat, Indonesia</span>
                         </div>
-                        <a href="https://maps.google.com/?q=Depok,Jawa+Barat" target="_blank" rel="noopener noreferrer" class="text-crimson-600 hover:text-crimson-700 font-bold inline-flex items-center gap-1 transition">
-                            Buka di Google Maps <i class="fa-solid fa-up-right-from-square text-[10px]"></i>
+                        <a href="https://maps.google.com/?q=Depok,Jawa+Barat" target="_blank" rel="noopener noreferrer" class="sm:hidden text-brand-orangeDark font-bold inline-flex items-center gap-1">
+                            Buka di Google Maps <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
                         </a>
                     </div>
                 </div>
@@ -187,17 +267,38 @@
         </div>
     </main>
 
-    <!-- FOOTER -->
-    <footer class="py-8 px-6 border-t border-slate-200/80 bg-white relative z-10 text-xs text-slate-500">
+    <!-- FOOTER HARMONIS -->
+    <footer class="py-8 px-6 border-t border-slate-200 bg-white relative z-10 text-xs text-slate-500">
         <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p>&copy; 2026 <span class="text-crimson-600 font-semibold">Misbahul Anam Sidiq</span>. All rights reserved.</p>
-            <div class="flex gap-5 text-base">
-                <a href="https://github.com/misbahulanam2206" target="_blank" class="text-slate-400 hover:text-crimson-600 transition"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.linkedin.com/feed/" target="_blank" class="text-slate-400 hover:text-crimson-600 transition"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://www.instagram.com/misbah.anam22/" target="_blank" class="text-slate-400 hover:text-crimson-600 transition"><i class="fa-brands fa-instagram"></i></a>
+            <div class="flex items-center gap-2 font-medium">
+                <span class="w-2 h-2 rounded-full bg-brand-orange animate-pulse"></span>
+                <p>&copy; 2026 <span class="font-bold text-slate-900">Misbahul Anam Sidiq</span>. All rights reserved.</p>
+            </div>
+            
+            <div class="flex gap-4 text-base">
+                <a href="https://github.com/misbahulanam2206" target="_blank" class="w-8 h-8 rounded-lg bg-slate-100 hover:bg-brand-blue hover:text-white text-slate-600 flex items-center justify-center transition"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/feed/" target="_blank" class="w-8 h-8 rounded-lg bg-slate-100 hover:bg-brand-orange hover:text-white text-slate-600 flex items-center justify-center transition"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/misbah.anam22/" target="_blank" class="w-8 h-8 rounded-lg bg-slate-100 hover:bg-brand-red hover:text-white text-slate-600 flex items-center justify-center transition"><i class="fa-brands fa-instagram"></i></a>
             </div>
         </div>
     </footer>
 
+    <!-- Script Menu Mobile -->
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const icon = document.getElementById('menu-icon');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            if (menu.classList.contains('hidden')) {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            }
+        });
+    </script>
 </body>
 </html>
