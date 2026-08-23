@@ -20,17 +20,17 @@
             theme: {
                 extend: {
                     colors: {
-                        crimson: {
-                            50: '#fff1f2',
-                            100: '#ffe4e6',
-                            200: '#fecdd3',
-                            300: '#fda4af',
-                            400: '#fb7185',
-                            500: '#f43f5e',
-                            600: '#e11d48',
-                            700: '#be123c',
-                            800: '#9f1239',
-                            900: '#881337',
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            200: '#bfdbfe',
+                            300: '#93c5fd',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
                         }
                     },
                     fontFamily: {
@@ -46,29 +46,29 @@
         .glass-card {
             background: rgba(255, 255, 255, 0.85);
             backdrop-filter: blur(16px);
-            border: 1px solid rgba(225, 29, 72, 0.12);
+            border: 1px solid rgba(37, 99, 235, 0.12);
         }
         .glow-bright {
-            box-shadow: 0 20px 40px -15px rgba(225, 29, 72, 0.15);
+            box-shadow: 0 20px 40px -15px rgba(37, 99, 235, 0.12);
         }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased min-h-screen py-16 px-6 relative overflow-x-hidden flex items-center justify-center">
 
-    <!-- Ambient Glow Background -->
-    <div class="fixed -top-40 -left-40 w-[600px] h-[600px] bg-rose-200/50 rounded-full blur-[140px] pointer-events-none z-0"></div>
-    <div class="fixed -bottom-40 -right-40 w-[550px] h-[550px] bg-amber-100/50 rounded-full blur-[150px] pointer-events-none z-0"></div>
+    <!-- Ambient Glow Background (Biru & Orange) -->
+    <div class="fixed -top-40 -left-40 w-[600px] h-[600px] bg-sky-200/50 rounded-full blur-[140px] pointer-events-none z-0"></div>
+    <div class="fixed -bottom-40 -right-40 w-[550px] h-[550px] bg-amber-200/50 rounded-full blur-[150px] pointer-events-none z-0"></div>
 
     <!-- KONTEN UTAMA KEAHLIAN -->
     <main class="max-w-4xl w-full mx-auto relative z-10 space-y-8">
         
         <!-- Header Section -->
         <div class="text-center space-y-3">
-            <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-rose-100/80 border border-rose-200 text-crimson-700 text-xs font-semibold tracking-wide uppercase shadow-sm">
-                <i class="fa-solid fa-layer-group text-crimson-600"></i> Capabilities
+            <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-100/80 border border-orange-200 text-orange-700 text-xs font-semibold tracking-wide uppercase shadow-sm">
+                <i class="fa-solid fa-layer-group text-orange-600"></i> Capabilities
             </span>
             <h1 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
-                Keahlian & <span class="bg-gradient-to-r from-crimson-600 to-rose-500 bg-clip-text text-transparent">Kemampuan Utama</span>
+                Keahlian & <span class="bg-gradient-to-r from-brand-600 via-blue-600 to-orange-500 bg-clip-text text-transparent">Kemampuan Utama</span>
             </h1>
             <p class="text-slate-500 text-sm max-w-md mx-auto">
                 Kombinasi latar belakang Infrastruktur Jaringan, Software Development, & Desain Visual.
@@ -79,9 +79,9 @@
         <div class="grid md:grid-cols-2 gap-6">
 
             <!-- Card 1: Infrastruktur & Jaringan -->
-            <div class="glass-card rounded-3xl p-6 sm:p-8 glow-bright border border-rose-100 space-y-5">
+            <div class="glass-card rounded-3xl p-6 sm:p-8 glow-bright border border-blue-100 space-y-5">
                 <div class="flex items-center gap-4 border-b border-slate-200/80 pb-4">
-                    <div class="w-12 h-12 rounded-2xl bg-rose-100 text-crimson-600 flex items-center justify-center text-xl font-bold flex-shrink-0">
+                    <div class="w-12 h-12 rounded-2xl bg-orange-100 text-orange-600 flex items-center justify-center text-xl font-bold flex-shrink-0">
                         <i class="fa-solid fa-network-wired"></i>
                     </div>
                     <div>
@@ -94,30 +94,30 @@
                     <div class="space-y-1.5">
                         <div class="flex justify-between text-xs font-bold">
                             <span class="text-slate-800">MikroTik & Routing Jaringan</span>
-                            <span class="text-crimson-600">85%</span>
+                            <span class="text-orange-600">85%</span>
                         </div>
                         <div class="w-full h-2 bg-slate-200/80 rounded-full overflow-hidden">
-                            <div class="h-full bg-gradient-to-r from-crimson-500 to-rose-500 rounded-full" style="width: 85%;"></div>
+                            <div class="h-full bg-gradient-to-r from-orange-500 to-amber-500 rounded-full" style="width: 85%;"></div>
                         </div>
                     </div>
 
                     <div class="space-y-1.5">
                         <div class="flex justify-between text-xs font-bold">
                             <span class="text-slate-800">Cisco Packet Tracer / Switching</span>
-                            <span class="text-crimson-600">80%</span>
+                            <span class="text-orange-600">80%</span>
                         </div>
                         <div class="w-full h-2 bg-slate-200/80 rounded-full overflow-hidden">
-                            <div class="h-full bg-gradient-to-r from-crimson-500 to-rose-500 rounded-full" style="width: 80%;"></div>
+                            <div class="h-full bg-gradient-to-r from-orange-500 to-amber-500 rounded-full" style="width: 80%;"></div>
                         </div>
                     </div>
 
                     <div class="space-y-1.5">
                         <div class="flex justify-between text-xs font-bold">
                             <span class="text-slate-800">Hardware & Linux Server Configuration</span>
-                            <span class="text-crimson-600">75%</span>
+                            <span class="text-orange-600">75%</span>
                         </div>
                         <div class="w-full h-2 bg-slate-200/80 rounded-full overflow-hidden">
-                            <div class="h-full bg-gradient-to-r from-crimson-500 to-rose-500 rounded-full" style="width: 75%;"></div>
+                            <div class="h-full bg-gradient-to-r from-orange-500 to-amber-500 rounded-full" style="width: 75%;"></div>
                         </div>
                     </div>
                 </div>
@@ -131,9 +131,9 @@
             </div>
 
             <!-- Card 2: Software & Web Development -->
-            <div class="glass-card rounded-3xl p-6 sm:p-8 glow-bright border border-rose-100 space-y-5">
+            <div class="glass-card rounded-3xl p-6 sm:p-8 glow-bright border border-blue-100 space-y-5">
                 <div class="flex items-center gap-4 border-b border-slate-200/80 pb-4">
-                    <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-600 flex items-center justify-center text-xl font-bold flex-shrink-0">
+                    <div class="w-12 h-12 rounded-2xl bg-blue-100 text-brand-600 flex items-center justify-center text-xl font-bold flex-shrink-0">
                         <i class="fa-solid fa-code"></i>
                     </div>
                     <div>
@@ -146,30 +146,30 @@
                     <div class="space-y-1.5">
                         <div class="flex justify-between text-xs font-bold">
                             <span class="text-slate-800">HTML5, CSS3 & Tailwind CSS</span>
-                            <span class="text-crimson-600">85%</span>
+                            <span class="text-brand-600">85%</span>
                         </div>
                         <div class="w-full h-2 bg-slate-200/80 rounded-full overflow-hidden">
-                            <div class="h-full bg-gradient-to-r from-crimson-500 to-rose-500 rounded-full" style="width: 85%;"></div>
+                            <div class="h-full bg-gradient-to-r from-brand-600 to-blue-500 rounded-full" style="width: 85%;"></div>
                         </div>
                     </div>
 
                     <div class="space-y-1.5">
                         <div class="flex justify-between text-xs font-bold">
                             <span class="text-slate-800">JavaScript / Pemrograman Web</span>
-                            <span class="text-crimson-600">75%</span>
+                            <span class="text-brand-600">75%</span>
                         </div>
                         <div class="w-full h-2 bg-slate-200/80 rounded-full overflow-hidden">
-                            <div class="h-full bg-gradient-to-r from-crimson-500 to-rose-500 rounded-full" style="width: 75%;"></div>
+                            <div class="h-full bg-gradient-to-r from-brand-600 to-blue-500 rounded-full" style="width: 75%;"></div>
                         </div>
                     </div>
 
                     <div class="space-y-1.5">
                         <div class="flex justify-between text-xs font-bold">
                             <span class="text-slate-800">Database (MySQL / Basis Data)</span>
-                            <span class="text-crimson-600">70%</span>
+                            <span class="text-brand-600">70%</span>
                         </div>
                         <div class="w-full h-2 bg-slate-200/80 rounded-full overflow-hidden">
-                            <div class="h-full bg-gradient-to-r from-crimson-500 to-rose-500 rounded-full" style="width: 70%;"></div>
+                            <div class="h-full bg-gradient-to-r from-brand-600 to-blue-500 rounded-full" style="width: 70%;"></div>
                         </div>
                     </div>
                 </div>
@@ -183,9 +183,9 @@
             </div>
 
             <!-- Card 3: Pembuatan & Pengeditan Foto -->
-            <div class="glass-card rounded-3xl p-6 sm:p-8 glow-bright border border-rose-100 space-y-5 md:col-span-2">
+            <div class="glass-card rounded-3xl p-6 sm:p-8 glow-bright border border-blue-100 space-y-5 md:col-span-2">
                 <div class="flex items-center gap-4 border-b border-slate-200/80 pb-4">
-                    <div class="w-12 h-12 rounded-2xl bg-rose-100 text-crimson-600 flex items-center justify-center text-xl font-bold flex-shrink-0">
+                    <div class="w-12 h-12 rounded-2xl bg-orange-100 text-orange-600 flex items-center justify-center text-xl font-bold flex-shrink-0">
                         <i class="fa-solid fa-camera-retro"></i>
                     </div>
                     <div>
@@ -199,20 +199,20 @@
                         <div class="space-y-1.5">
                             <div class="flex justify-between text-xs font-bold">
                                 <span class="text-slate-800">Fotografi Produk & Portrait</span>
-                                <span class="text-crimson-600">80%</span>
+                                <span class="text-orange-600">80%</span>
                             </div>
                             <div class="w-full h-2 bg-slate-200/80 rounded-full overflow-hidden">
-                                <div class="h-full bg-gradient-to-r from-crimson-500 to-rose-500 rounded-full" style="width: 80%;"></div>
+                                <div class="h-full bg-gradient-to-r from-orange-500 to-amber-500 rounded-full" style="width: 80%;"></div>
                             </div>
                         </div>
 
                         <div class="space-y-1.5">
                             <div class="flex justify-between text-xs font-bold">
                                 <span class="text-slate-800">Adobe Photoshop / Retouching</span>
-                                <span class="text-crimson-600">85%</span>
+                                <span class="text-orange-600">85%</span>
                             </div>
                             <div class="w-full h-2 bg-slate-200/80 rounded-full overflow-hidden">
-                                <div class="h-full bg-gradient-to-r from-crimson-500 to-rose-500 rounded-full" style="width: 85%;"></div>
+                                <div class="h-full bg-gradient-to-r from-orange-500 to-amber-500 rounded-full" style="width: 85%;"></div>
                             </div>
                         </div>
                     </div>
@@ -221,20 +221,20 @@
                         <div class="space-y-1.5">
                             <div class="flex justify-between text-xs font-bold">
                                 <span class="text-slate-800">Lightroom / Color Grading</span>
-                                <span class="text-crimson-600">80%</span>
+                                <span class="text-orange-600">80%</span>
                             </div>
                             <div class="w-full h-2 bg-slate-200/80 rounded-full overflow-hidden">
-                                <div class="h-full bg-gradient-to-r from-crimson-500 to-rose-500 rounded-full" style="width: 80%;"></div>
+                                <div class="h-full bg-gradient-to-r from-orange-500 to-amber-500 rounded-full" style="width: 80%;"></div>
                             </div>
                         </div>
 
                         <div class="space-y-1.5">
                             <div class="flex justify-between text-xs font-bold">
                                 <span class="text-slate-800">Manipulasi Gambar & Asset Digital</span>
-                                <span class="text-crimson-600">75%</span>
+                                <span class="text-orange-600">75%</span>
                             </div>
                             <div class="w-full h-2 bg-slate-200/80 rounded-full overflow-hidden">
-                                <div class="h-full bg-gradient-to-r from-crimson-500 to-rose-500 rounded-full" style="width: 75%;"></div>
+                                <div class="h-full bg-gradient-to-r from-orange-500 to-amber-500 rounded-full" style="width: 75%;"></div>
                             </div>
                         </div>
                     </div>
